@@ -15,7 +15,7 @@ def scan_endpoint():  # Renamed to avoid confusion with the scan() function itse
     payload = data.get("payload", "")
     src_ip = data.get("src_ip", "unknown")
 
-    # Run signature matching
+    # Run signature match 
     result = check_payload_against_signatures(payload)
 
     if result:
