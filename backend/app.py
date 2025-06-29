@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
-from backend.signature_engine import check_payload_against_signatures
-from backend.supabase_client import supabase
+from signature_engine import check_payload_against_signatures
+from supabase_client import supabase
+
 
 app = Flask(__name__)
 
