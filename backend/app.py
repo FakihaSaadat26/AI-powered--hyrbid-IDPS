@@ -2,19 +2,24 @@ from flask import Flask, request, jsonify
 from signature_engine import check_payload_against_signatures
 from supabase_client import supabase
 
-
 app = Flask(__name__)
 
 @app.route("/scan", methods=["POST"])
-def scan():
-    data = request.json
+def scan_endpoint():  # Renamed to avoid confusion with the scan() function itself
+    data = request.get_json()
+
+    # Safety check
+    if not data:
+        return jsonify({"error": "No JSON data received"}), 400
+
     payload = data.get("payload", "")
     src_ip = data.get("src_ip", "unknown")
 
+    # Run signature matching
     result = check_payload_against_signatures(payload)
 
     if result:
-        # Log to Supabase alerts
+        # Log to Supabase alerts table
         supabase.table("alerts").insert({
             "src_ip": src_ip,
             "threat_type": result["threat"],
@@ -27,6 +32,7 @@ def scan():
             "status": "threat_detected",
             "details": result
         }), 200
+
     else:
         return jsonify({"status": "clean"}), 200
 
