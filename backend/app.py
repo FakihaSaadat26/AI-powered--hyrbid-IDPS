@@ -5,7 +5,7 @@ from supabase_client import supabase
 app = Flask(__name__)
 
 @app.route("/scan", methods=["POST"])
-def scan_endpoint():  # Renamed to avoid confusion with the scan() function itself
+def scan_endpoint():  # Renamed to avoid confusion with the scan() function in signature_engine.py
     data = request.get_json()
 
     # Safety check
@@ -19,7 +19,7 @@ def scan_endpoint():  # Renamed to avoid confusion with the scan() function itse
     result = check_payload_against_signatures(payload)
 
     if result:
-        # Log to Supabase alerts table
+        # Log to Supabase alert table
         supabase.table("alerts").insert({
             "src_ip": src_ip,
             "threat_type": result["threat"],
