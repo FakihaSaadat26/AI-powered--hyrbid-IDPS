@@ -1,25 +1,28 @@
 from flask import Flask, request, jsonify
 from signature_engine import check_payload_against_signatures
 from supabase_client import supabase
+from logger import logger 
 
 app = Flask(__name__)
 
 @app.route("/scan", methods=["POST"])
-def scan_endpoint():  # Renamed to avoid confusion with the scan() function in signature_engine.py
+def scan_endpoint():
     data = request.get_json()
 
-    # Safety check
     if not data:
+        logger.warning("Received request with no JSON data.")
         return jsonify({"error": "No JSON data received"}), 400
 
     payload = data.get("payload", "")
     src_ip = data.get("src_ip", "unknown")
+    
+    logger.info(f"Received scan request from IP: {src_ip}")
 
-    # Run signature match 
     result = check_payload_against_signatures(payload)
 
     if result:
-        # Log to Supabase alert table
+        logger.warning(f"Threat detected from IP {src_ip}: {result['threat']} (Severity: {result['severity']})")
+
         supabase.table("alerts").insert({
             "src_ip": src_ip,
             "threat_type": result["threat"],
@@ -28,12 +31,14 @@ def scan_endpoint():  # Renamed to avoid confusion with the scan() function in s
             "detected_by": "signature"
         }).execute()
 
+        logger.info("Threat info saved to Supabase.")
+
         return jsonify({
             "status": "threat_detected",
             "details": result
         }), 200
-
     else:
+        logger.info(f"No threat detected from IP {src_ip}. Payload clean.")
         return jsonify({"status": "clean"}), 200
 
 if __name__ == "__main__":
