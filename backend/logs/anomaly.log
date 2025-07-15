@@ -998,3 +998,38 @@
 2025-07-05 21:17:32,132 - anomaly_logger - INFO - Testing log line 997
 2025-07-05 21:17:32,132 - anomaly_logger - INFO - Testing log line 998
 2025-07-05 21:17:32,132 - anomaly_logger - INFO - Testing log line 999
+2025-07-15 16:10:10,408 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.10
+2025-07-15 16:27:16,714 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.10
+2025-07-15 16:27:18,835 - anomaly_logger - WARNING - Threat detected from IP 192.168.1.10: XSS (Severity: medium)
+2025-07-15 16:31:35,560 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.10
+2025-07-15 16:31:36,824 - anomaly_logger - WARNING - Threat detected from IP 192.168.1.10: XSS (Severity: medium)
+2025-07-15 16:31:37,502 - anomaly_logger - INFO - Threat info saved to Supabase.
+2025-07-15 21:30:33,953 - anomaly_logger - ERROR - Error in detect_syn_flood_flows: {'message': 'column network_data.flowpacketssec does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.flow_packets_sec".', 'details': None}
+2025-07-15 21:30:34,674 - anomaly_logger - ERROR - Error in detect_failed_login_bursts: {'message': 'column network_data.packetlengthmean does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.packet_length_mean".', 'details': None}
+2025-07-15 21:30:35,832 - anomaly_logger - WARNING - [DDoS BURST] Detected 1000 DDoS-labeled flows.
+2025-07-15 21:30:36,182 - anomaly_logger - ERROR - Error in detect_ddos_bursts: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (9, 2025-07-15 21:30:35+00, unknown, DDoS Burst Detected, High, None, rule).'}
+2025-07-15 21:35:33,676 - anomaly_logger - ERROR - Error in detect_syn_flood_flows: {'message': 'column network_data.flowpacketssec does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.flow_packets_sec".', 'details': None}
+2025-07-15 21:35:33,942 - anomaly_logger - ERROR - Error in detect_failed_login_bursts: {'message': 'column network_data.packetlengthmean does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.packet_length_mean".', 'details': None}
+2025-07-15 21:35:34,884 - anomaly_logger - WARNING - [DDoS BURST] Detected 1000 DDoS-labeled flows.
+2025-07-15 21:35:35,185 - anomaly_logger - ERROR - Error in detect_ddos_bursts: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (10, 2025-07-15 21:35:34+00, unknown, DDoS Burst Detected, High, None, rule).'}
+2025-07-15 21:35:41,491 - anomaly_logger - ERROR - Error in detect_syn_flood_flows: {'message': 'column network_data.flowpacketssec does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.flow_packets_sec".', 'details': None}
+2025-07-15 21:35:41,852 - anomaly_logger - ERROR - Error in detect_failed_login_bursts: {'message': 'column network_data.packetlengthmean does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.packet_length_mean".', 'details': None}
+2025-07-15 21:35:42,356 - anomaly_logger - WARNING - [DDoS BURST] Detected 1000 DDoS-labeled flows.
+2025-07-15 21:35:42,591 - anomaly_logger - ERROR - Error in detect_ddos_bursts: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (11, 2025-07-15 21:35:42+00, unknown, DDoS Burst Detected, High, None, rule).'}
+2025-07-15 21:41:44,134 - anomaly_logger - ERROR - Error in detect_syn_flood_flows: {'message': 'column network_data.flowpacketssec does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.flow_packets_sec".', 'details': None}
+2025-07-15 21:41:44,450 - anomaly_logger - ERROR - Error in detect_failed_login_bursts: {'message': 'column network_data.packetlengthmean does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.packet_length_mean".', 'details': None}
+2025-07-15 21:41:45,050 - anomaly_logger - WARNING - [DDoS BURST] Detected 1000 DDoS-labeled flows.
+2025-07-15 21:41:45,359 - anomaly_logger - ERROR - Error in detect_ddos_bursts: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (12, 2025-07-15 21:41:45+00, unknown, DDoS Burst Detected, High, None, rule).'}
+2025-07-15 21:42:08,156 - anomaly_logger - ERROR - Error in detect_syn_flood_flows: {'message': 'column network_data.flowpacketssec does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.flow_packets_sec".', 'details': None}
+2025-07-15 21:42:08,489 - anomaly_logger - ERROR - Error in detect_failed_login_bursts: {'message': 'column network_data.packetlengthmean does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.packet_length_mean".', 'details': None}
+2025-07-15 21:42:09,001 - anomaly_logger - WARNING - [DDoS BURST] Detected 1000 DDoS-labeled flows.
+2025-07-15 21:42:09,310 - anomaly_logger - ERROR - Error in detect_ddos_bursts: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (13, 2025-07-15 21:42:09+00, unknown, DDoS Burst Detected, High, None, rule).'}
+2025-07-15 21:44:37,162 - anomaly_logger - ERROR - Error in detect_syn_flood_flows: {'message': 'column network_data.flowpacketssec does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.flow_packets_sec".', 'details': None}
+2025-07-15 21:44:37,655 - anomaly_logger - ERROR - Error in detect_failed_login_bursts: {'message': 'column network_data.packetlengthmean does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.packet_length_mean".', 'details': None}
+2025-07-15 21:44:44,094 - anomaly_logger - WARNING - [DDoS BURST] Total rows: 11451 labeled as DDoS
+2025-07-15 21:47:10,638 - anomaly_logger - ERROR - Error in detect_syn_flood_flows: {'message': 'column network_data.flowpacketssec does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.flow_packets_sec".', 'details': None}
+2025-07-15 21:47:11,117 - anomaly_logger - ERROR - Error in detect_failed_login_bursts: {'message': 'column network_data.packetlengthmean does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.packet_length_mean".', 'details': None}
+2025-07-15 21:47:17,875 - anomaly_logger - WARNING - [DDoS BURST] Total rows: 11451 labeled as DDoS
+2025-07-15 21:50:23,579 - anomaly_logger - ERROR - Error in detect_syn_flood_flows: {'message': 'column network_data.flowpacketssec does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.flow_packets_sec".', 'details': None}
+2025-07-15 21:50:23,863 - anomaly_logger - ERROR - Error in detect_failed_login_bursts: {'message': 'column network_data.packetlengthmean does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.packet_length_mean".', 'details': None}
+2025-07-15 21:50:30,127 - anomaly_logger - WARNING - [DDoS BURST] Total rows: 11451 labeled as DDoS

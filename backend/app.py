@@ -1,10 +1,15 @@
+# app.py
 from flask import Flask, request, jsonify
-from signature_engine import check_payload_against_signatures
+from signature.signature_engine import check_payload_against_signatures
+from rules.flow_rule_engine import detect_ddos_bursts, detect_failed_login_bursts, detect_syn_flood_flows
+
+
 from supabase_client import supabase
-from logger import logger 
+from utils.logger import logger
 
 app = Flask(__name__)
 
+# --- Signature-based detection endpoint ---
 @app.route("/scan", methods=["POST"])
 def scan_endpoint():
     data = request.get_json()
@@ -28,8 +33,12 @@ def scan_endpoint():
             "threat_type": result["threat"],
             "severity": result["severity"],
             "action_taken": "None",
-            "detected_by": "signature"
+            "detected_by": "signature",
+            
+            "timestamp": request.headers.get("timestamp", None) 
         }).execute()
+       
+   
 
         logger.info("Threat info saved to Supabase.")
 
@@ -40,6 +49,23 @@ def scan_endpoint():
     else:
         logger.info(f"No threat detected from IP {src_ip}. Payload clean.")
         return jsonify({"status": "clean"}), 200
+
+
+# --- Rule-based detection endpoint ---
+@app.route("/run-rule-engine", methods=["GET"])
+def run_rule_engine():
+    syn_alerts = detect_syn_flood_flows()
+    login_alerts = detect_failed_login_bursts()
+    ddos_alerts = detect_ddos_bursts()
+
+    total_alerts = syn_alerts + login_alerts + ddos_alerts
+
+    return jsonify({
+        "status": "Rule engine detection completed",
+        "total_alerts_generated": len(total_alerts),
+        "alerts": total_alerts
+    }), 200
+
 
 if __name__ == "__main__":
     app.run(debug=True)
