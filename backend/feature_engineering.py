@@ -1,5 +1,10 @@
 import pandas as pd
 from supabase_client import supabase
+import numpy as np
+from sklearn.ensemble import IsolationForest
+from sklearn.svm import OneClassSVM
+from sklearn.preprocessing import StandardScaler
+import joblib
 
 # Fetch data from Supabase
 def fetch_raw_data():
@@ -43,10 +48,52 @@ def select_features(df):
 # Save to CSV
 def save_features_to_csv(df):
     df.to_csv("processed_features2.csv", index=False)
-    print("✅ Saved as processed_features2.csv")
+    print("Saved as processed_features2.csv")
+
+# Load processed features dataset
+DATA_PATH = 'backend/processed_features2.csv'
+df = pd.read_csv(DATA_PATH)
+
+# Select feature columns (exclude label if present)
+feature_cols = [col for col in df.columns if col != 'label']
+X = df[feature_cols].values
+
+# Standardize features
+scaler = StandardScaler()
+X_scaled = scaler.fit_transform(X)
+
+# Train IsolationForest
+iso_forest = IsolationForest(contamination='auto', random_state=42)
+iso_forest.fit(X_scaled)
+
+# Train OneClassSVM
+ocsvm = OneClassSVM(nu=0.05, kernel='rbf', gamma='auto')
+ocsvm.fit(X_scaled)
+
+# Save models and scaler
+joblib.dump(iso_forest, 'isolation_forest_model.joblib')
+joblib.dump(ocsvm, 'oneclass_svm_model.joblib')
+joblib.dump(scaler, 'scaler.joblib')
+
+print('IsolationForest, OneClassSVM, and scaler saved.')
 
 # Run everything
 if __name__ == "__main__":
+    # Test: Load models and run a sample prediction
+    iso_forest_loaded = joblib.load('isolation_forest_model.joblib')
+    ocsvm_loaded = joblib.load('oneclass_svm_model.joblib')
+    scaler_loaded = joblib.load('scaler.joblib')
+
+    # Take a sample (first row) from the dataset
+    sample = X[0].reshape(1, -1)
+    sample_scaled = scaler_loaded.transform(sample)
+
+    iso_pred = iso_forest_loaded.predict(sample_scaled)
+    ocsvm_pred = ocsvm_loaded.predict(sample_scaled)
+
+    print(f"Sample IsolationForest prediction: {iso_pred[0]}")
+    print(f"Sample OneClassSVM prediction: {ocsvm_pred[0]}")
+
     raw_data = fetch_raw_data()
     print("Raw data rows fetched:", len(raw_data))
     print("Raw data preview:")

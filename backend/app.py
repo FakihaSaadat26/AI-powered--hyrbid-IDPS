@@ -68,4 +68,5 @@ def run_rule_engine():
 
 
 if __name__ == "__main__":
+    print("heelo")
     app.run(debug=True)
