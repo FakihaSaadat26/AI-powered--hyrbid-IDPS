@@ -54,14 +54,14 @@ def detect_syn_flood_flows():
     print("Running SYN flood detection...")
     try:
         response = supabase.table("network_data") \
-            .select("flow packets sec", "flow duration") \
-            .gt("flow packets sec", 1000) \
-            .lt("flow duration", 1000) \
+            .select("flow_packets_sec", "flow_duration") \
+            .gt("flow_packets_sec", 1000) \
+            .lt("flow_duration", 1000) \
             .execute()
 
         alerts = []
         for row in response.data:
-            alert_msg = f"[SYN FLOOD] Packets/sec: {row['flow packets sec']} | Duration: {row['flow duration']}"
+            alert_msg = f"[SYN FLOOD] Packets/sec: {row['flow_packets_sec']} | Duration: {row['flow_duration']}"
             logger.warning(alert_msg)
             alerts.append({
                 "src_ip": "unknown",
@@ -84,9 +84,9 @@ def detect_failed_login_bursts():
     print("Running failed login burst detection...")
     try:
         response = supabase.table("network_data") \
-            .select("dst_port", "packet length mean", "flow duration") \
-            .lt("packet length mean", 100) \
-            .lt("flow duration", 1000) \
+            .select("dst_port", "packet_length_mean", "flow_duration") \
+            .lt("packet_length_mean", 100) \
+            .lt("flow_duration", 1000) \
             .in_("dst_port", [22, 21, 23, 3306]) \
             .execute()
 
