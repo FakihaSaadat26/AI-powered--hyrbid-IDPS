@@ -3,11 +3,17 @@ from flask import Flask, request, jsonify
 from signature.signature_engine import check_payload_against_signatures
 from rules.flow_rule_engine import detect_ddos_bursts, detect_failed_login_bursts, detect_syn_flood_flows
 
+import joblib
+import numpy as np
 
 from supabase_client import supabase
 from utils.logger import logger
 
 app = Flask(__name__)
+
+# Load ML model and scaler at startup
+iso_forest = joblib.load('backend/isolation_forest_model.joblib')
+scaler = joblib.load('backend/scaler.joblib')
 
 # --- Signature-based detection endpoint ---
 @app.route("/scan", methods=["POST"])
@@ -67,6 +73,28 @@ def run_rule_engine():
     }), 200
 
 
+@app.route("/ml-predict", methods=["POST"])
+def ml_predict():
+    data = request.get_json()
+    if not data or "features" not in data:
+        return jsonify({"error": "No features provided"}), 400
+
+    features = np.array(data["features"]).reshape(1, -1)
+    features_scaled = scaler.transform(features)
+    prediction = iso_forest.predict(features_scaled)[0]
+
+    # Store result in Supabase alerts table
+    supabase.table("alerts").insert({
+        "src_ip": data.get("src_ip", "unknown"),
+        "threat_type": "ML Anomaly" if prediction == -1 else "Normal",
+        "severity": "High" if prediction == -1 else "Low",
+        "action_taken": "None",
+        "detected_by": "ml_model",
+        "timestamp": data.get("timestamp", None)
+    }).execute()
+
+    return jsonify({"prediction": int(prediction)}), 200
+
+
 if __name__ == "__main__":
-    print("heelo")
     app.run(debug=True)
