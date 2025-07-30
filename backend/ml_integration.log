@@ -1,0 +1,422 @@
+2025-07-27 23:58:02,600 - INFO - ✅ ML models loaded successfully
+2025-07-27 23:58:02,600 - INFO - ML Integration initialized successfully
+2025-07-27 23:58:02,646 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-27 23:58:02,646 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-27 23:58:02,649 - INFO -  * Restarting with stat
+2025-07-27 23:58:06,613 - INFO - ✅ ML models loaded successfully
+2025-07-27 23:58:06,613 - INFO - ML Integration initialized successfully
+2025-07-27 23:58:06,640 - WARNING -  * Debugger is active!
+2025-07-27 23:58:06,643 - INFO -  * Debugger PIN: 948-248-133
+2025-07-27 23:58:42,856 - INFO - 127.0.0.1 - - [27/Jul/2025 23:58:42] "GET / HTTP/1.1" 200 -
+2025-07-27 23:58:43,100 - INFO - 127.0.0.1 - - [27/Jul/2025 23:58:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-07-27 23:59:06,154 - INFO - 127.0.0.1 - - [27/Jul/2025 23:59:06] "[31m[1mGET /ml-predict HTTP/1.1[0m" 405 -
+2025-07-27 23:59:22,581 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 404 Not Found"
+2025-07-27 23:59:22,593 - ERROR - Error getting ML statistics: {'message': 'relation "public.ml_alerts" does not exist', 'code': '42P01', 'hint': None, 'details': None}
+2025-07-27 23:59:22,595 - INFO - 127.0.0.1 - - [27/Jul/2025 23:59:22] "GET /ml-stats HTTP/1.1" 200 -
+2025-07-28 00:06:14,845 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:06:26,335 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:06:26,335 - INFO - ML Integration initialized successfully
+2025-07-28 00:06:26,380 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-28 00:06:26,381 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-28 00:06:26,382 - INFO -  * Restarting with stat
+2025-07-28 00:06:31,285 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:06:31,285 - INFO - ML Integration initialized successfully
+2025-07-28 00:06:31,312 - WARNING -  * Debugger is active!
+2025-07-28 00:06:31,315 - INFO -  * Debugger PIN: 948-248-133
+2025-07-28 00:06:45,231 - INFO - 127.0.0.1 - - [28/Jul/2025 00:06:45] "GET / HTTP/1.1" 200 -
+2025-07-28 00:06:54,844 - ERROR - Error preprocessing data: 'init_win_bytes_forward'
+2025-07-28 00:06:54,845 - INFO - 127.0.0.1 - - [28/Jul/2025 00:06:54] "[35m[1mPOST /ml-predict-advanced HTTP/1.1[0m" 500 -
+2025-07-28 00:12:36,791 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/ml_integration.py', reloading
+2025-07-28 00:12:37,918 - INFO -  * Restarting with stat
+2025-07-28 00:12:48,113 - INFO - ML models loaded successfully
+2025-07-28 00:12:48,113 - INFO - ML Integration initialized successfully
+2025-07-28 00:12:48,159 - WARNING -  * Debugger is active!
+2025-07-28 00:12:48,161 - INFO -  * Debugger PIN: 948-248-133
+2025-07-28 00:12:55,018 - INFO - Preprocessed 1 records for ML prediction
+2025-07-28 00:12:55,075 - INFO - ML predictions completed: 1 records
+2025-07-28 00:12:56,421 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22model_prediction%22%2C%22created_at%22%2C%22dst_ip%22%2C%22action_taken%22%2C%22src_ip%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-07-28 00:12:56,428 - WARNING - ML API detected anomaly from 192.168.1.200 (score: 0.889)
+2025-07-28 00:12:56,429 - ERROR - Error in ML prediction endpoint: Object of type bool is not JSON serializable
+2025-07-28 00:12:56,430 - INFO - 127.0.0.1 - - [28/Jul/2025 00:12:56] "[35m[1mPOST /ml-predict-advanced HTTP/1.1[0m" 500 -
+2025-07-28 00:16:20,797 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/app.py', reloading
+2025-07-28 00:16:21,602 - INFO -  * Restarting with stat
+2025-07-28 00:16:29,142 - INFO - ML models loaded successfully
+2025-07-28 00:16:29,142 - INFO - ML Integration initialized successfully
+2025-07-28 00:16:29,176 - WARNING -  * Debugger is active!
+2025-07-28 00:16:29,178 - INFO -  * Debugger PIN: 948-248-133
+2025-07-28 00:16:44,195 - INFO - Preprocessed 1 records for ML prediction
+2025-07-28 00:16:44,227 - INFO - ML predictions completed: 1 records
+2025-07-28 00:16:45,707 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22src_ip%22%2C%22model_prediction%22%2C%22action_taken%22%2C%22anomaly_score%22%2C%22dst_ip%22%2C%22created_at%22 "HTTP/2 201 Created"
+2025-07-28 00:16:45,726 - WARNING - ML API detected anomaly from 192.168.1.200
+2025-07-28 00:16:45,729 - INFO - 127.0.0.1 - - [28/Jul/2025 00:16:45] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-07-28 00:17:36,975 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-07-28 00:17:37,463 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-07-28T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-07-28 00:17:37,483 - INFO - 127.0.0.1 - - [28/Jul/2025 00:17:37] "GET /ml-stats HTTP/1.1" 200 -
+2025-07-28 00:18:18,811 - INFO - Preprocessed 1 records for ML prediction
+2025-07-28 00:18:18,838 - INFO - ML predictions completed: 1 records
+2025-07-28 00:18:19,741 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22src_ip%22%2C%22model_prediction%22%2C%22action_taken%22%2C%22anomaly_score%22%2C%22dst_ip%22%2C%22created_at%22 "HTTP/2 201 Created"
+2025-07-28 00:18:19,756 - WARNING - ML API detected anomaly from 192.168.1.100
+2025-07-28 00:18:19,757 - INFO - 127.0.0.1 - - [28/Jul/2025 00:18:19] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-07-28 00:19:17,421 - INFO - Preprocessed 1 records for ML prediction
+2025-07-28 00:19:17,452 - INFO - ML predictions completed: 1 records
+2025-07-28 00:19:18,582 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22src_ip%22%2C%22model_prediction%22%2C%22action_taken%22%2C%22anomaly_score%22%2C%22dst_ip%22%2C%22created_at%22 "HTTP/2 201 Created"
+2025-07-28 00:19:18,588 - WARNING - ML API detected anomaly from 192.168.1.50
+2025-07-28 00:19:18,590 - INFO - 127.0.0.1 - - [28/Jul/2025 00:19:18] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-07-28 00:46:54,664 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:46:54,664 - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:46:54,722 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-28 00:46:54,722 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-28 00:46:54,725 - INFO -  * Restarting with stat
+2025-07-28 00:47:00,424 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:47:00,425 - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:47:00,451 - WARNING -  * Debugger is active!
+2025-07-28 00:47:00,455 - INFO -  * Debugger PIN: 948-248-133
+2025-07-28 00:47:23,736 - INFO - 127.0.0.1 - - [28/Jul/2025 00:47:23] "GET / HTTP/1.1" 200 -
+2025-07-28 00:47:34,433 - INFO - 127.0.0.1 - - [28/Jul/2025 00:47:34] "[35m[1mGET /test-model-variety HTTP/1.1[0m" 500 -
+2025-07-28 00:50:03,437 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/app.py', reloading
+2025-07-28 00:50:04,039 - INFO -  * Restarting with stat
+2025-07-28 00:50:14,097 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:50:14,097 - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:50:14,147 - WARNING -  * Debugger is active!
+2025-07-28 00:50:14,149 - INFO -  * Debugger PIN: 948-248-133
+2025-07-28 00:50:55,977 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/app.py', reloading
+2025-07-28 00:50:57,375 - INFO -  * Restarting with stat
+2025-07-28 00:51:04,416 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:51:04,417 - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:51:04,460 - WARNING -  * Debugger is active!
+2025-07-28 00:51:04,465 - INFO -  * Debugger PIN: 948-248-133
+2025-07-28 00:51:08,493 - INFO - 127.0.0.1 - - [28/Jul/2025 00:51:08] "[35m[1mGET /test-model-variety HTTP/1.1[0m" 500 -
+2025-07-28 00:53:12,849 - INFO - 127.0.0.1 - - [28/Jul/2025 00:53:12] "[33mGET /debug-features HTTP/1.1[0m" 404 -
+2025-07-28 00:54:03,315 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:54:03,316 - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:54:03,364 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-28 00:54:03,365 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-28 00:54:03,369 - INFO -  * Restarting with stat
+2025-07-28 00:54:07,905 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:54:07,905 - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:54:07,952 - WARNING -  * Debugger is active!
+2025-07-28 00:54:07,954 - INFO -  * Debugger PIN: 948-248-133
+2025-07-28 00:54:30,335 - INFO - 127.0.0.1 - - [28/Jul/2025 00:54:30] "GET / HTTP/1.1" 200 -
+2025-07-28 00:55:21,229 - INFO - 127.0.0.1 - - [28/Jul/2025 00:55:21] "[33mGET /debug-features HTTP/1.1[0m" 404 -
+2025-07-28 00:56:59,315 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/feature_engineering.py', reloading
+2025-07-28 00:57:00,244 - INFO -  * Restarting with stat
+2025-07-28 00:57:05,530 - INFO - ✅ ML models loaded successfully
+2025-07-28 00:57:05,531 - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:57:05,558 - WARNING -  * Debugger is active!
+2025-07-28 00:57:05,560 - INFO -  * Debugger PIN: 948-248-133
+2025-07-28 00:57:06,658 - INFO - 127.0.0.1 - - [28/Jul/2025 00:57:06] "[33mGET /debug-features HTTP/1.1[0m" 404 -
+2025-07-29 20:37:03,920 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-07-29 20:37:04,538 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-07-29T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-07-29 20:37:04,542 - INFO - 127.0.0.1 - - [29/Jul/2025 20:37:04] "GET /ml-stats HTTP/1.1" 200 -
+2025-07-30 01:00:57,898 - INFO - ✅ ML models loaded successfully
+2025-07-30 01:00:57,901 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 01:00:58,471 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-30 01:00:58,471 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 01:00:58,510 - INFO -  * Restarting with stat
+2025-07-30 01:01:06,426 - INFO - ✅ ML models loaded successfully
+2025-07-30 01:01:06,427 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 01:01:06,516 - WARNING -  * Debugger is active!
+2025-07-30 01:01:06,531 - INFO -  * Debugger PIN: 948-248-133
+2025-07-30 02:11:43,419 - INFO - 127.0.0.1 - - [30/Jul/2025 02:11:43] "[33mGET /debug-features HTTP/1.1[0m" 404 -
+2025-07-30 19:55:35,614 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/feature_engineering.py', reloading
+2025-07-30 19:55:39,085 - INFO -  * Restarting with stat
+2025-07-30 19:59:46,777 - INFO - ✅ ML models loaded successfully
+2025-07-30 19:59:46,811 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 19:59:46,811 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 19:59:46,812 - INFO - ✅ Models show good prediction variety
+2025-07-30 19:59:46,812 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 19:59:47,102 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-30 19:59:47,102 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 19:59:47,115 - INFO -  * Restarting with stat
+2025-07-30 19:59:50,349 - INFO - ✅ ML models loaded successfully
+2025-07-30 19:59:50,378 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 19:59:50,378 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 19:59:50,378 - INFO - ✅ Models show good prediction variety
+2025-07-30 19:59:50,378 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 19:59:50,402 - WARNING -  * Debugger is active!
+2025-07-30 19:59:50,406 - INFO -  * Debugger PIN: 948-248-133
+2025-07-30 20:01:14,839 - INFO - 127.0.0.1 - - [30/Jul/2025 20:01:14] "GET / HTTP/1.1" 200 -
+2025-07-30 20:01:15,111 - INFO - 127.0.0.1 - - [30/Jul/2025 20:01:15] "[35m[1mGET /test-model-variety HTTP/1.1[0m" 500 -
+2025-07-30 20:01:16,353 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:01:16,359 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (19, null, 192.168.1.100, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:01:16,362 - INFO - 127.0.0.1 - - [30/Jul/2025 20:01:16] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:01:16,970 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:01:16,985 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (20, null, 192.168.100.50, ML Anomaly, High, None, simple_ml_model).'}
+2025-07-30 20:01:16,986 - INFO - 127.0.0.1 - - [30/Jul/2025 20:01:16] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:01:17,646 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:01:17,647 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (21, null, 192.168.200.25, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:01:17,648 - INFO - 127.0.0.1 - - [30/Jul/2025 20:01:17] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:01:17,959 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:01:17,976 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (22, null, 192.168.50.75, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:01:17,978 - INFO - 127.0.0.1 - - [30/Jul/2025 20:01:17] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:01:17,995 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:01:18,010 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:01:18,027 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:01:18,030 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:01:18,077 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:01:18,078 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:01:18,266 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22src_ip%22%2C%22isolation_forest_score%22%2C%22dst_ip%22%2C%22dst_port%22%2C%22anomaly_score%22%2C%22model_prediction%22%2C%22ocsvm_score%22%2C%22action_taken%22%2C%22created_at%22 "HTTP/2 400 Bad Request"
+2025-07-30 20:01:18,287 - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:01:18,288 - INFO - 127.0.0.1 - - [30/Jul/2025 20:01:18] "[35m[1mPOST /ml-predict-advanced HTTP/1.1[0m" 500 -
+2025-07-30 20:09:42,679 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/app.py', reloading
+2025-07-30 20:09:45,935 - INFO -  * Restarting with stat
+2025-07-30 20:09:52,701 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:09:52,735 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:09:52,736 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:09:52,736 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:09:52,736 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:09:52,764 - WARNING -  * Debugger is active!
+2025-07-30 20:09:52,769 - INFO -  * Debugger PIN: 948-248-133
+2025-07-30 20:09:53,999 - INFO - 127.0.0.1 - - [30/Jul/2025 20:09:53] "GET / HTTP/1.1" 200 -
+2025-07-30 20:09:54,254 - INFO - 127.0.0.1 - - [30/Jul/2025 20:09:54] "[35m[1mGET /test-model-variety HTTP/1.1[0m" 500 -
+2025-07-30 20:09:55,181 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:09:55,187 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (23, null, 192.168.1.100, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:09:55,190 - INFO - 127.0.0.1 - - [30/Jul/2025 20:09:55] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:09:55,537 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:09:55,553 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (24, null, 192.168.100.50, ML Anomaly, High, None, simple_ml_model).'}
+2025-07-30 20:09:55,554 - INFO - 127.0.0.1 - - [30/Jul/2025 20:09:55] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:09:55,885 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:09:55,903 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (25, null, 192.168.200.25, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:09:55,904 - INFO - 127.0.0.1 - - [30/Jul/2025 20:09:55] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:09:56,201 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:09:56,219 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (26, null, 192.168.50.75, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:09:56,221 - INFO - 127.0.0.1 - - [30/Jul/2025 20:09:56] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:09:56,228 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:09:56,246 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:09:56,257 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:09:56,262 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:09:56,315 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:09:56,315 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:09:56,535 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22dst_port%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22%2C%22src_ip%22%2C%22model_prediction%22%2C%22created_at%22%2C%22action_taken%22%2C%22dst_ip%22%2C%22ocsvm_score%22 "HTTP/2 400 Bad Request"
+2025-07-30 20:09:56,550 - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:09:56,551 - INFO - 127.0.0.1 - - [30/Jul/2025 20:09:56] "[35m[1mPOST /ml-predict-advanced HTTP/1.1[0m" 500 -
+2025-07-30 20:11:41,802 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/app.py', reloading
+2025-07-30 20:11:42,691 - INFO -  * Restarting with stat
+2025-07-30 20:13:14,723 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:13:14,754 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:13:14,754 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:13:14,754 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:13:14,755 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:13:14,791 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-30 20:13:14,792 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 20:13:14,794 - INFO -  * Restarting with stat
+2025-07-30 20:13:18,003 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:13:18,032 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:13:18,032 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:13:18,032 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:13:18,032 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:13:18,061 - WARNING -  * Debugger is active!
+2025-07-30 20:13:18,063 - INFO -  * Debugger PIN: 948-248-133
+2025-07-30 20:13:26,924 - INFO - 127.0.0.1 - - [30/Jul/2025 20:13:26] "GET / HTTP/1.1" 200 -
+2025-07-30 20:13:27,094 - INFO - 127.0.0.1 - - [30/Jul/2025 20:13:27] "[35m[1mGET /test-model-variety HTTP/1.1[0m" 500 -
+2025-07-30 20:13:27,956 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:13:27,961 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (27, null, 192.168.1.100, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:13:27,963 - INFO - 127.0.0.1 - - [30/Jul/2025 20:13:27] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:13:28,315 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:13:28,322 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (28, null, 192.168.100.50, ML Anomaly, High, None, simple_ml_model).'}
+2025-07-30 20:13:28,323 - INFO - 127.0.0.1 - - [30/Jul/2025 20:13:28] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:13:28,590 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:13:28,605 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (29, null, 192.168.200.25, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:13:28,606 - INFO - 127.0.0.1 - - [30/Jul/2025 20:13:28] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:13:28,863 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 400 Bad Request"
+2025-07-30 20:13:28,882 - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (30, null, 192.168.50.75, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:13:28,885 - INFO - 127.0.0.1 - - [30/Jul/2025 20:13:28] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:13:28,904 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:13:28,927 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:13:28,934 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:13:28,937 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:13:28,977 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:13:28,977 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:13:29,164 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22model_prediction%22%2C%22anomaly_score%22%2C%22isolation_forest_score%22%2C%22created_at%22%2C%22action_taken%22%2C%22src_ip%22%2C%22ocsvm_score%22%2C%22dst_ip%22%2C%22dst_port%22 "HTTP/2 400 Bad Request"
+2025-07-30 20:13:29,182 - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:13:29,184 - INFO - 127.0.0.1 - - [30/Jul/2025 20:13:29] "[35m[1mPOST /ml-predict-advanced HTTP/1.1[0m" 500 -
+2025-07-30 20:22:38,793 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:22:38,884 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:22:38,884 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:22:38,885 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:22:38,887 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:22:38,966 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-30 20:22:38,967 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 20:22:38,970 - INFO -  * Restarting with stat
+2025-07-30 20:22:44,651 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:22:44,704 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:22:44,704 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:22:44,704 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:22:44,704 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:22:44,748 - WARNING -  * Debugger is active!
+2025-07-30 20:22:44,751 - INFO -  * Debugger PIN: 948-248-133
+2025-07-30 20:22:46,245 - INFO - 127.0.0.1 - - [30/Jul/2025 20:22:46] "GET / HTTP/1.1" 200 -
+2025-07-30 20:22:46,457 - INFO - 127.0.0.1 - - [30/Jul/2025 20:22:46] "[35m[1mGET /test-model-variety HTTP/1.1[0m" 500 -
+2025-07-30 20:22:47,334 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-07-30 20:22:47,340 - INFO - Simple ML prediction stored: 1 for IP 192.168.1.100
+2025-07-30 20:22:47,341 - ERROR - Error in simple ML prediction: Object of type bool is not JSON serializable
+2025-07-30 20:22:47,344 - INFO - 127.0.0.1 - - [30/Jul/2025 20:22:47] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:22:47,656 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-07-30 20:22:47,682 - INFO - Simple ML prediction stored: -1 for IP 192.168.100.50
+2025-07-30 20:22:47,684 - ERROR - Error in simple ML prediction: Object of type bool is not JSON serializable
+2025-07-30 20:22:47,687 - INFO - 127.0.0.1 - - [30/Jul/2025 20:22:47] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:22:48,122 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-07-30 20:22:48,146 - INFO - Simple ML prediction stored: 1 for IP 192.168.200.25
+2025-07-30 20:22:48,147 - ERROR - Error in simple ML prediction: Object of type bool is not JSON serializable
+2025-07-30 20:22:48,151 - INFO - 127.0.0.1 - - [30/Jul/2025 20:22:48] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:22:48,611 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-07-30 20:22:48,618 - INFO - Simple ML prediction stored: 1 for IP 192.168.50.75
+2025-07-30 20:22:48,619 - ERROR - Error in simple ML prediction: Object of type bool is not JSON serializable
+2025-07-30 20:22:48,623 - INFO - 127.0.0.1 - - [30/Jul/2025 20:22:48] "[35m[1mPOST /ml-predict HTTP/1.1[0m" 500 -
+2025-07-30 20:22:48,651 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:22:48,670 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:22:48,721 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:22:48,725 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:22:48,819 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:22:48,819 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:22:49,038 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22isolation_forest_score%22%2C%22action_taken%22%2C%22dst_port%22%2C%22dst_ip%22%2C%22created_at%22%2C%22src_ip%22%2C%22model_prediction%22%2C%22anomaly_score%22%2C%22ocsvm_score%22 "HTTP/2 400 Bad Request"
+2025-07-30 20:22:49,056 - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:22:49,058 - INFO - 127.0.0.1 - - [30/Jul/2025 20:22:49] "[35m[1mPOST /ml-predict-advanced HTTP/1.1[0m" 500 -
+2025-07-30 20:32:39,490 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/app.py', reloading
+2025-07-30 20:32:40,291 - INFO -  * Restarting with stat
+2025-07-30 20:32:49,939 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:32:50,053 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:32:50,053 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:32:50,054 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:32:50,054 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:32:50,093 - WARNING -  * Debugger is active!
+2025-07-30 20:32:50,097 - INFO -  * Debugger PIN: 948-248-133
+2025-07-30 20:35:06,148 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:35:06,194 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:35:06,194 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:35:06,194 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:35:06,195 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:35:06,252 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-30 20:35:06,253 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 20:35:06,256 - INFO -  * Restarting with stat
+2025-07-30 20:35:11,293 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:35:11,357 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:35:11,358 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:35:11,359 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:35:11,360 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:35:11,457 - WARNING -  * Debugger is active!
+2025-07-30 20:35:11,460 - INFO -  * Debugger PIN: 948-248-133
+2025-07-30 20:35:18,474 - INFO - 127.0.0.1 - - [30/Jul/2025 20:35:18] "GET / HTTP/1.1" 200 -
+2025-07-30 20:35:18,743 - INFO - 127.0.0.1 - - [30/Jul/2025 20:35:18] "[35m[1mGET /test-model-variety HTTP/1.1[0m" 500 -
+2025-07-30 20:35:20,119 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-07-30 20:35:20,130 - INFO - Simple ML prediction stored: 1 for IP 192.168.1.100
+2025-07-30 20:35:20,131 - INFO - 127.0.0.1 - - [30/Jul/2025 20:35:20] "POST /ml-predict HTTP/1.1" 200 -
+2025-07-30 20:35:20,482 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-07-30 20:35:20,486 - INFO - Simple ML prediction stored: -1 for IP 192.168.100.50
+2025-07-30 20:35:20,487 - INFO - 127.0.0.1 - - [30/Jul/2025 20:35:20] "POST /ml-predict HTTP/1.1" 200 -
+2025-07-30 20:35:20,846 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-07-30 20:35:20,870 - INFO - Simple ML prediction stored: -1 for IP 192.168.200.25
+2025-07-30 20:35:20,872 - INFO - 127.0.0.1 - - [30/Jul/2025 20:35:20] "POST /ml-predict HTTP/1.1" 200 -
+2025-07-30 20:35:21,249 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-07-30 20:35:21,271 - INFO - Simple ML prediction stored: 1 for IP 192.168.50.75
+2025-07-30 20:35:21,273 - INFO - 127.0.0.1 - - [30/Jul/2025 20:35:21] "POST /ml-predict HTTP/1.1" 200 -
+2025-07-30 20:35:21,291 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:35:21,335 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:35:21,377 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:35:21,385 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:35:21,480 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:35:21,480 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:35:21,714 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22model_prediction%22%2C%22dst_port%22%2C%22action_taken%22%2C%22anomaly_score%22%2C%22isolation_forest_score%22%2C%22ocsvm_score%22%2C%22dst_ip%22%2C%22src_ip%22 "HTTP/2 400 Bad Request"
+2025-07-30 20:35:21,730 - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:35:21,734 - INFO - 127.0.0.1 - - [30/Jul/2025 20:35:21] "[35m[1mPOST /ml-predict-advanced HTTP/1.1[0m" 500 -
+2025-07-30 20:37:03,259 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:37:03,276 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:37:03,300 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:37:03,303 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:37:03,375 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:37:03,375 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:37:04,090 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22model_prediction%22%2C%22dst_port%22%2C%22action_taken%22%2C%22anomaly_score%22%2C%22isolation_forest_score%22%2C%22ocsvm_score%22%2C%22dst_ip%22%2C%22src_ip%22 "HTTP/2 400 Bad Request"
+2025-07-30 20:37:04,107 - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:37:04,109 - INFO - 127.0.0.1 - - [30/Jul/2025 20:37:04] "[35m[1mPOST /ml-predict-advanced HTTP/1.1[0m" 500 -
+2025-07-30 20:51:33,023 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/app.py', reloading
+2025-07-30 20:51:34,866 - INFO -  * Restarting with stat
+2025-07-30 20:51:43,724 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:51:43,788 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:51:43,789 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:51:43,790 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:51:43,790 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:51:43,853 - WARNING -  * Debugger is active!
+2025-07-30 20:51:43,860 - INFO -  * Debugger PIN: 948-248-133
+2025-07-30 20:51:46,791 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:51:46,830 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:51:46,858 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:51:46,862 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:51:46,957 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:51:46,957 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:51:48,443 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22action_taken%22%2C%22anomaly_score%22%2C%22created_at%22%2C%22src_ip%22%2C%22dst_port%22%2C%22dst_ip%22%2C%22isolation_forest_score%22%2C%22ocsvm_score%22%2C%22model_prediction%22 "HTTP/2 201 Created"
+2025-07-30 20:51:48,464 - WARNING - 🚨 Advanced ML API detected anomaly from unknown
+2025-07-30 20:51:48,466 - INFO - 127.0.0.1 - - [30/Jul/2025 20:51:48] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-07-30 20:53:30,221 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:53:30,242 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:53:30,260 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:53:30,270 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:53:30,366 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:53:30,366 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:53:31,459 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22action_taken%22%2C%22anomaly_score%22%2C%22created_at%22%2C%22src_ip%22%2C%22dst_port%22%2C%22dst_ip%22%2C%22isolation_forest_score%22%2C%22ocsvm_score%22%2C%22model_prediction%22 "HTTP/2 201 Created"
+2025-07-30 20:53:31,465 - WARNING - 🚨 Advanced ML API detected anomaly from unknown
+2025-07-30 20:53:31,467 - INFO - 127.0.0.1 - - [30/Jul/2025 20:53:31] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-07-30 20:54:58,232 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/app.py', reloading
+2025-07-30 20:54:59,175 - INFO -  * Restarting with stat
+2025-07-30 20:58:03,540 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:58:03,600 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:58:03,600 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:58:03,601 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:58:03,601 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:58:03,674 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-07-30 20:58:03,674 - INFO - [33mPress CTRL+C to quit[0m
+2025-07-30 20:58:03,678 - INFO -  * Restarting with stat
+2025-07-30 20:58:09,575 - INFO - ✅ ML models loaded successfully
+2025-07-30 20:58:09,612 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-07-30 20:58:09,612 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-07-30 20:58:09,612 - INFO - ✅ Models show good prediction variety
+2025-07-30 20:58:09,613 - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:58:09,644 - WARNING -  * Debugger is active!
+2025-07-30 20:58:09,647 - INFO -  * Debugger PIN: 948-248-133
+2025-07-30 20:58:40,398 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:58:40,434 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:58:40,461 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:58:40,469 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:58:40,565 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:58:40,566 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:58:41,417 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22dst_ip%22%2C%22isolation_forest_score%22%2C%22action_taken%22%2C%22model_prediction%22%2C%22created_at%22%2C%22ocsvm_score%22%2C%22dst_port%22%2C%22src_ip%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-07-30 20:58:41,428 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.100
+2025-07-30 20:58:41,429 - INFO - 127.0.0.1 - - [30/Jul/2025 20:58:41] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-07-30 20:58:45,356 - INFO - 🔧 Using feature engineering preprocessing...
+2025-07-30 20:58:45,389 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-07-30 20:58:45,406 - INFO - ✅ Features selected: (1, 13)
+2025-07-30 20:58:45,411 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-07-30 20:58:45,518 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-07-30 20:58:45,518 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-07-30 20:58:45,998 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22dst_ip%22%2C%22isolation_forest_score%22%2C%22action_taken%22%2C%22model_prediction%22%2C%22created_at%22%2C%22ocsvm_score%22%2C%22dst_port%22%2C%22src_ip%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-07-30 20:58:46,020 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.10.5
+2025-07-30 20:58:46,022 - INFO - 127.0.0.1 - - [30/Jul/2025 20:58:46] "POST /ml-predict-advanced HTTP/1.1" 200 -

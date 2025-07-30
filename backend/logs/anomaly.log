@@ -1033,3 +1033,84 @@
 2025-07-15 21:50:23,579 - anomaly_logger - ERROR - Error in detect_syn_flood_flows: {'message': 'column network_data.flowpacketssec does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.flow_packets_sec".', 'details': None}
 2025-07-15 21:50:23,863 - anomaly_logger - ERROR - Error in detect_failed_login_bursts: {'message': 'column network_data.packetlengthmean does not exist', 'code': '42703', 'hint': 'Perhaps you meant to reference the column "network_data.packet_length_mean".', 'details': None}
 2025-07-15 21:50:30,127 - anomaly_logger - WARNING - [DDoS BURST] Total rows: 11451 labeled as DDoS
+2025-07-21 18:01:56,470 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-21 18:01:59,672 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-21 18:25:40,121 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-21 18:32:15,668 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-21 18:50:20,324 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-21 18:50:23,174 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-27 23:26:27,485 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-27 23:26:30,421 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-27 23:28:33,668 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-27 23:28:37,569 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-27 23:47:39,214 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-27 23:47:43,883 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-27 23:51:28,910 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-27 23:51:33,921 - anomaly_logger - ERROR - Failed to initialize ML Integration: 'MLIntegration' object has no attribute 'logger'
+2025-07-27 23:58:02,600 - anomaly_logger - INFO - ML Integration initialized successfully
+2025-07-27 23:58:06,613 - anomaly_logger - INFO - ML Integration initialized successfully
+2025-07-28 00:06:26,335 - anomaly_logger - INFO - ML Integration initialized successfully
+2025-07-28 00:06:31,285 - anomaly_logger - INFO - ML Integration initialized successfully
+2025-07-28 00:12:48,113 - anomaly_logger - INFO - ML Integration initialized successfully
+2025-07-28 00:12:56,428 - anomaly_logger - WARNING - ML API detected anomaly from 192.168.1.200 (score: 0.889)
+2025-07-28 00:12:56,429 - anomaly_logger - ERROR - Error in ML prediction endpoint: Object of type bool is not JSON serializable
+2025-07-28 00:16:29,142 - anomaly_logger - INFO - ML Integration initialized successfully
+2025-07-28 00:16:45,726 - anomaly_logger - WARNING - ML API detected anomaly from 192.168.1.200
+2025-07-28 00:18:19,756 - anomaly_logger - WARNING - ML API detected anomaly from 192.168.1.100
+2025-07-28 00:19:18,588 - anomaly_logger - WARNING - ML API detected anomaly from 192.168.1.50
+2025-07-28 00:46:54,664 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:47:00,425 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:50:14,097 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:51:04,417 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:54:03,316 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:54:07,905 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-28 00:57:05,531 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 01:00:57,901 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 01:01:06,427 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 19:59:46,812 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 19:59:50,378 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:01:16,359 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (19, null, 192.168.1.100, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:01:16,985 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (20, null, 192.168.100.50, ML Anomaly, High, None, simple_ml_model).'}
+2025-07-30 20:01:17,647 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (21, null, 192.168.200.25, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:01:17,976 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (22, null, 192.168.50.75, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:01:18,287 - anomaly_logger - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:09:52,736 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:09:55,187 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (23, null, 192.168.1.100, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:09:55,553 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (24, null, 192.168.100.50, ML Anomaly, High, None, simple_ml_model).'}
+2025-07-30 20:09:55,903 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (25, null, 192.168.200.25, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:09:56,219 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (26, null, 192.168.50.75, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:09:56,550 - anomaly_logger - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:13:14,755 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:13:18,032 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:13:27,961 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (27, null, 192.168.1.100, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:13:28,322 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (28, null, 192.168.100.50, ML Anomaly, High, None, simple_ml_model).'}
+2025-07-30 20:13:28,605 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (29, null, 192.168.200.25, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:13:28,882 - anomaly_logger - ERROR - Error in simple ML prediction: {'message': 'new row for relation "alerts" violates check constraint "alerts_detected_by_check"', 'code': '23514', 'hint': None, 'details': 'Failing row contains (30, null, 192.168.50.75, Normal, Low, None, simple_ml_model).'}
+2025-07-30 20:13:29,182 - anomaly_logger - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:22:38,887 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:22:44,704 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:22:47,340 - anomaly_logger - INFO - Simple ML prediction stored: 1 for IP 192.168.1.100
+2025-07-30 20:22:47,341 - anomaly_logger - ERROR - Error in simple ML prediction: Object of type bool is not JSON serializable
+2025-07-30 20:22:47,682 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.100.50
+2025-07-30 20:22:47,684 - anomaly_logger - ERROR - Error in simple ML prediction: Object of type bool is not JSON serializable
+2025-07-30 20:22:48,146 - anomaly_logger - INFO - Simple ML prediction stored: 1 for IP 192.168.200.25
+2025-07-30 20:22:48,147 - anomaly_logger - ERROR - Error in simple ML prediction: Object of type bool is not JSON serializable
+2025-07-30 20:22:48,618 - anomaly_logger - INFO - Simple ML prediction stored: 1 for IP 192.168.50.75
+2025-07-30 20:22:48,619 - anomaly_logger - ERROR - Error in simple ML prediction: Object of type bool is not JSON serializable
+2025-07-30 20:22:49,056 - anomaly_logger - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:32:50,054 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:35:06,195 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:35:11,360 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:35:20,130 - anomaly_logger - INFO - Simple ML prediction stored: 1 for IP 192.168.1.100
+2025-07-30 20:35:20,486 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.100.50
+2025-07-30 20:35:20,870 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.200.25
+2025-07-30 20:35:21,271 - anomaly_logger - INFO - Simple ML prediction stored: 1 for IP 192.168.50.75
+2025-07-30 20:35:21,730 - anomaly_logger - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:37:04,107 - anomaly_logger - ERROR - Error in advanced ML prediction endpoint: {'message': 'invalid input syntax for type integer: "unknown"', 'code': '22P02', 'hint': None, 'details': None}
+2025-07-30 20:51:43,790 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:51:48,464 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from unknown
+2025-07-30 20:53:31,465 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from unknown
+2025-07-30 20:58:03,601 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:58:09,613 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-07-30 20:58:41,428 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.100
+2025-07-30 20:58:46,020 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.10.5
