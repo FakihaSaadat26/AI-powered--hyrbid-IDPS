@@ -420,3 +420,21 @@
 2025-07-30 20:58:45,998 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22dst_ip%22%2C%22isolation_forest_score%22%2C%22action_taken%22%2C%22model_prediction%22%2C%22created_at%22%2C%22ocsvm_score%22%2C%22dst_port%22%2C%22src_ip%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
 2025-07-30 20:58:46,020 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.10.5
 2025-07-30 20:58:46,022 - INFO - 127.0.0.1 - - [30/Jul/2025 20:58:46] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-01 01:45:41,395 - INFO - ✅ ML models loaded successfully
+2025-08-01 01:45:41,548 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-01 01:45:41,549 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-01 01:45:41,549 - INFO - ✅ Models show good prediction variety
+2025-08-01 01:45:41,550 - INFO - ✅ ML Integration initialized successfully
+2025-08-01 01:45:42,126 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-08-01 01:45:42,126 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-01 01:45:42,149 - INFO -  * Restarting with stat
+2025-08-01 01:45:58,737 - INFO - ✅ ML models loaded successfully
+2025-08-01 01:45:58,829 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-01 01:45:58,829 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-01 01:45:58,829 - INFO - ✅ Models show good prediction variety
+2025-08-01 01:45:58,829 - INFO - ✅ ML Integration initialized successfully
+2025-08-01 01:45:58,918 - WARNING -  * Debugger is active!
+2025-08-01 01:45:58,924 - INFO -  * Debugger PIN: 782-083-435
