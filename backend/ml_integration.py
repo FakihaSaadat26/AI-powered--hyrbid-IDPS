@@ -9,6 +9,7 @@ from supabase_client import supabase
 from utils.logger import logger
 import subprocess
 import os
+from firewall_manager import FirewallManager
 
 # Import feature engineering functions
 try:
@@ -318,6 +319,13 @@ class MLIntegration:
         """Trigger IP blocking for high-score anomalies"""
         blocked_count = 0
         
+        # Initialize FirewallManager instance
+        try:
+            fw_manager = FirewallManager()
+        except Exception as e:
+            self.logger.error(f"❌ Failed to initialize FirewallManager: {e}")
+            return 0
+        
         for alert in alerts:
             src_ip = alert['src_ip']
             score = alert['anomaly_score']
@@ -327,17 +335,18 @@ class MLIntegration:
             
             if score > 0.8:
                 try:
-                    result = subprocess.run([
-                        "sudo", "python", "firewall_manager.py", 
-                        "block", src_ip, f"ML Anomaly Detection (score: {score:.2f})"
-                    ], capture_output=True, text=True)
+                    # Direct function call instead of subprocess
+                    success = fw_manager.block_ip(
+                        src_ip, 
+                        f"ML Anomaly Detection (score: {score:.2f})"
+                    )
                     
-                    if result.returncode == 0:
+                    if success:
                         self.update_alert_action(alert, "IP_BLOCKED")
                         blocked_count += 1
                         self.logger.warning(f"🔒 BLOCKED IP {src_ip} due to ML anomaly (score: {score:.2f})")
                     else:
-                        self.logger.error(f"❌ Failed to block {src_ip}: {result.stderr}")
+                        self.logger.error(f"❌ Failed to block {src_ip}: FirewallManager returned False")
                         
                 except Exception as e:
                     self.logger.error(f"❌ Error blocking IP {src_ip}: {e}")

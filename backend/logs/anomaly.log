@@ -1128,3 +1128,6 @@
 2025-08-05 00:12:25,780 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.100.50
 2025-08-05 00:34:58,355 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.100
 2025-08-05 00:34:59,838 - anomaly_logger - INFO - No threat detected from IP 192.168.1.100. Payload clean.
+2025-08-05 00:55:31,921 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 00:55:37,707 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 00:57:10,121 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.100

@@ -623,3 +623,6 @@
 2025-08-05 00:35:04,503 - INFO - 127.0.0.1 - - [05/Aug/2025 00:35:04] "GET /run-rule-engine HTTP/1.1" 200 -
 2025-08-05 00:35:09,875 - INFO - 127.0.0.1 - - [05/Aug/2025 00:35:09] "GET / HTTP/1.1" 200 -
 2025-08-05 00:35:16,006 - INFO - 127.0.0.1 - - [05/Aug/2025 00:35:16] "GET / HTTP/1.1" 200 -
+2025-08-05 00:43:36,656 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/ml_integration.py', reloading
+2025-08-05 00:43:36,724 - INFO -  * Detected change in '/home/humna_26/nust/INTERNSHIP_PROJECT/AI-powered--hyrbid-IDPS/backend/ml_integration.py', reloading
+2025-08-05 00:43:39,141 - INFO -  * Restarting with watchdog (inotify)
