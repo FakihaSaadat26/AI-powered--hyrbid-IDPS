@@ -46,6 +46,35 @@ st.markdown("""
 # Configuration
 API_BASE_URL = "http://localhost:5000"
 
+# Helper function to safely parse datetime columns
+def safe_datetime_parse(df, column_name):
+    """
+    Safely parse datetime columns with various formats
+    """
+    if df.empty or column_name not in df.columns:
+        return df
+    
+    try:
+        # First try: ISO8601 format (most common for your data)
+        df[column_name] = pd.to_datetime(df[column_name], format='ISO8601')
+    except (ValueError, TypeError):
+        try:
+            # Second try: UTC timezone handling
+            df[column_name] = pd.to_datetime(df[column_name], utc=True)
+        except (ValueError, TypeError):
+            try:
+                # Third try: Mixed format inference
+                df[column_name] = pd.to_datetime(df[column_name], format='mixed')
+            except (ValueError, TypeError):
+                try:
+                    # Fourth try: Standard pandas inference
+                    df[column_name] = pd.to_datetime(df[column_name], infer_datetime_format=True)
+                except Exception as e:
+                    st.warning(f"Could not parse {column_name} timestamps: {e}")
+                    # If all else fails, leave the column as is
+    
+    return df
+
 class IDPSDashboard:
     def __init__(self):
         self.api_base = API_BASE_URL
@@ -62,7 +91,10 @@ class IDPSDashboard:
         """Fetch alerts from Supabase"""
         try:
             response = supabase.table("alerts").select("*").order("id", desc=True).limit(limit).execute()
-            return pd.DataFrame(response.data) if response.data else pd.DataFrame()
+            df = pd.DataFrame(response.data) if response.data else pd.DataFrame()
+            # Parse datetime columns immediately after fetching
+            df = safe_datetime_parse(df, 'timestamp')
+            return df
         except Exception as e:
             st.error(f"Error fetching alerts: {e}")
             return pd.DataFrame()
@@ -71,7 +103,10 @@ class IDPSDashboard:
         """Fetch ML alerts from Supabase"""
         try:
             response = supabase.table("ml_alerts").select("*").order("id", desc=True).limit(limit).execute()
-            return pd.DataFrame(response.data) if response.data else pd.DataFrame()
+            df = pd.DataFrame(response.data) if response.data else pd.DataFrame()
+            # Parse datetime columns immediately after fetching
+            df = safe_datetime_parse(df, 'created_at')
+            return df
         except Exception as e:
             st.error(f"Error fetching ML alerts: {e}")
             return pd.DataFrame()
@@ -80,7 +115,13 @@ class IDPSDashboard:
         """Fetch network data from Supabase"""
         try:
             response = supabase.table("network_data").select("*").order("id", desc=True).limit(limit).execute()
-            return pd.DataFrame(response.data) if response.data else pd.DataFrame()
+            df = pd.DataFrame(response.data) if response.data else pd.DataFrame()
+            # Parse datetime columns if they exist
+            if 'timestamp' in df.columns:
+                df = safe_datetime_parse(df, 'timestamp')
+            if 'created_at' in df.columns:
+                df = safe_datetime_parse(df, 'created_at')
+            return df
         except Exception as e:
             st.error(f"Error fetching network data: {e}")
             return pd.DataFrame()
@@ -143,7 +184,7 @@ def show_overview_page(dashboard):
     """Overview dashboard with key metrics"""
     st.header("📊 System Overview")
     
-    # Fetch data
+    # Fetch data (datetime parsing is now handled in the dashboard methods)
     alerts_df = dashboard.get_alerts_data()
     ml_alerts_df = dashboard.get_ml_alerts_data()
     
@@ -181,12 +222,15 @@ def show_overview_page(dashboard):
     
     with col2:
         st.subheader("📈 Alerts Timeline")
-        if not alerts_df.empty:
-            alerts_df['timestamp'] = pd.to_datetime(alerts_df['timestamp'])
-            hourly_counts = alerts_df.set_index('timestamp').resample('H').size()
-            fig = px.line(x=hourly_counts.index, y=hourly_counts.values,
-                         labels={'x': 'Time', 'y': 'Alert Count'})
-            st.plotly_chart(fig, use_container_width=True)
+        if not alerts_df.empty and 'timestamp' in alerts_df.columns:
+            # Check if timestamp column was successfully parsed
+            if pd.api.types.is_datetime64_any_dtype(alerts_df['timestamp']):
+                hourly_counts = alerts_df.set_index('timestamp').resample('H').size()
+                fig = px.line(x=hourly_counts.index, y=hourly_counts.values,
+                             labels={'x': 'Time', 'y': 'Alert Count'})
+                st.plotly_chart(fig, use_container_width=True)
+            else:
+                st.info("Timestamp data could not be parsed for timeline")
         else:
             st.info("No timeline data available")
     
@@ -203,7 +247,7 @@ def show_alerts_page(dashboard):
     """Real-time alerts monitoring page"""
     st.header("🚨 Real-time Alert Monitor")
     
-    # Fetch alerts
+    # Fetch alerts (datetime parsing is now handled in the dashboard methods)
     alerts_df = dashboard.get_alerts_data()
     ml_alerts_df = dashboard.get_ml_alerts_data()
     
@@ -559,7 +603,7 @@ def show_reports_page(dashboard):
     """Reports and analytics page"""
     st.header("📊 Security Reports & Analytics")
     
-    # Fetch data
+    # Fetch data (datetime parsing is now handled in the dashboard methods)
     alerts_df = dashboard.get_alerts_data(limit=500)
     ml_alerts_df = dashboard.get_ml_alerts_data(limit=500)
     
@@ -571,14 +615,16 @@ def show_reports_page(dashboard):
         # Threat trends
         st.subheader("📈 Threat Trends")
         
-        alerts_df['timestamp'] = pd.to_datetime(alerts_df['timestamp'], format='ISO8601')
-        
-        # Daily trend
-        daily_counts = alerts_df.set_index('timestamp').resample('D').size()
-        fig = px.bar(x=daily_counts.index, y=daily_counts.values,
-                    labels={'x': 'Date', 'y': 'Alert Count'},
-                    title="Daily Alert Trends")
-        st.plotly_chart(fig, use_container_width=True)
+        # Check if timestamp column was successfully parsed
+        if 'timestamp' in alerts_df.columns and pd.api.types.is_datetime64_any_dtype(alerts_df['timestamp']):
+            # Daily trend
+            daily_counts = alerts_df.set_index('timestamp').resample('D').size()
+            fig = px.bar(x=daily_counts.index, y=daily_counts.values,
+                        labels={'x': 'Date', 'y': 'Alert Count'},
+                        title="Daily Alert Trends")
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.warning("Timestamp data could not be parsed for trend analysis")
         
         # Threat type analysis
         col1, col2 = st.columns(2)
