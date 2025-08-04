@@ -571,7 +571,7 @@ def show_reports_page(dashboard):
         # Threat trends
         st.subheader("📈 Threat Trends")
         
-        alerts_df['timestamp'] = pd.to_datetime(alerts_df['timestamp'])
+        alerts_df['timestamp'] = pd.to_datetime(alerts_df['timestamp'], format='ISO8601')
         
         # Daily trend
         daily_counts = alerts_df.set_index('timestamp').resample('D').size()

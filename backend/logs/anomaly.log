@@ -1118,3 +1118,6 @@
 2025-08-01 01:45:58,829 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
 2025-08-04 23:26:24,045 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
 2025-08-04 23:26:27,599 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 00:03:55,500 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 00:04:01,214 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 00:05:17,372 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.100

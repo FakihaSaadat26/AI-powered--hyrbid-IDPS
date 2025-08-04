@@ -476,3 +476,59 @@
 2025-08-04 23:40:01,782 - INFO - 127.0.0.1 - - [04/Aug/2025 23:40:01] "GET / HTTP/1.1" 200 -
 2025-08-04 23:40:01,801 - INFO - 127.0.0.1 - - [04/Aug/2025 23:40:01] "GET / HTTP/1.1" 200 -
 2025-08-04 23:40:17,607 - INFO - 127.0.0.1 - - [04/Aug/2025 23:40:17] "GET / HTTP/1.1" 200 -
+2025-08-05 00:03:55,460 - INFO - ✅ ML models loaded successfully
+2025-08-05 00:03:55,499 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 00:03:55,499 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 00:03:55,499 - INFO - ✅ Models show good prediction variety
+2025-08-05 00:03:55,500 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 00:03:55,551 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.18.26:5000
+2025-08-05 00:03:55,554 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-05 00:03:55,580 - INFO -  * Restarting with watchdog (inotify)
+2025-08-05 00:04:01,159 - INFO - ✅ ML models loaded successfully
+2025-08-05 00:04:01,214 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 00:04:01,214 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 00:04:01,214 - INFO - ✅ Models show good prediction variety
+2025-08-05 00:04:01,214 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 00:04:01,269 - WARNING -  * Debugger is active!
+2025-08-05 00:04:01,274 - INFO -  * Debugger PIN: 900-441-357
+2025-08-05 00:04:19,883 - INFO - 127.0.0.1 - - [05/Aug/2025 00:04:19] "GET / HTTP/1.1" 200 -
+2025-08-05 00:04:40,272 - INFO - 127.0.0.1 - - [05/Aug/2025 00:04:40] "GET / HTTP/1.1" 200 -
+2025-08-05 00:04:59,226 - INFO - 127.0.0.1 - - [05/Aug/2025 00:04:59] "GET / HTTP/1.1" 200 -
+2025-08-05 00:04:59,257 - INFO - 127.0.0.1 - - [05/Aug/2025 00:04:59] "GET / HTTP/1.1" 200 -
+2025-08-05 00:05:04,586 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:04] "GET / HTTP/1.1" 200 -
+2025-08-05 00:05:05,475 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 00:05:05,780 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 00:05:05,782 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:05] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 00:05:15,677 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:15] "GET / HTTP/1.1" 200 -
+2025-08-05 00:05:16,121 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 00:05:16,734 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 00:05:16,740 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:16] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 00:05:16,830 - INFO - 🔧 Using feature engineering preprocessing...
+2025-08-05 00:05:16,912 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-08-05 00:05:16,942 - INFO - ✅ Features selected: (1, 13)
+2025-08-05 00:05:16,954 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-08-05 00:05:17,125 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-08-05 00:05:17,125 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-08-05 00:05:17,348 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22ocsvm_score%22%2C%22src_ip%22%2C%22model_prediction%22%2C%22dst_ip%22%2C%22action_taken%22%2C%22dst_port%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22%2C%22created_at%22 "HTTP/2 201 Created"
+2025-08-05 00:05:17,372 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.100
+2025-08-05 00:05:17,376 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:17] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-05 00:05:24,826 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:24] "GET / HTTP/1.1" 200 -
+2025-08-05 00:05:25,229 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 00:05:25,771 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 00:05:25,781 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:25] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 00:05:25,911 - INFO - 🚀 Starting ML detection cycle...
+2025-08-05 00:05:26,160 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&order=id.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 00:05:26,180 - INFO - 📭 No new network data found
+2025-08-05 00:05:26,187 - INFO - 📭 No new network data to process
+2025-08-05 00:05:26,391 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 00:05:26,666 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 00:05:26,674 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:26] "POST /run-ml-detection HTTP/1.1" 200 -
+2025-08-05 00:05:35,146 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:35] "GET / HTTP/1.1" 200 -
+2025-08-05 00:05:35,681 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 00:05:35,992 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 00:05:36,000 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:36] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 00:05:37,097 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:37] "[35m[1mGET /test-model-variety HTTP/1.1[0m" 500 -
+2025-08-05 00:05:47,554 - INFO - 127.0.0.1 - - [05/Aug/2025 00:05:47] "GET / HTTP/1.1" 200 -
