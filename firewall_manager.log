@@ -1,0 +1,133 @@
+2025-08-05 11:49:29,804 - ERROR - ❌ Failed to load ML models: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 11:49:29,805 - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 11:57:24,832 - ERROR - ❌ Failed to load ML models: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 11:57:24,832 - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 11:57:24,858 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.7.28.182:5050
+2025-08-05 11:57:24,858 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-05 11:57:24,859 - INFO -  * Restarting with stat
+2025-08-05 11:57:26,018 - ERROR - ❌ Failed to load ML models: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 11:57:26,019 - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 11:57:26,036 - WARNING -  * Debugger is active!
+2025-08-05 11:57:26,045 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 12:00:48,894 - ERROR - ❌ Failed to load ML models: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 12:00:48,894 - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 12:00:48,917 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.7.28.182:5050
+2025-08-05 12:00:48,917 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-05 12:00:48,918 - INFO -  * Restarting with stat
+2025-08-05 12:00:50,060 - ERROR - ❌ Failed to load ML models: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 12:00:50,060 - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 12:00:50,077 - WARNING -  * Debugger is active!
+2025-08-05 12:00:50,084 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 21:51:52,075 - ERROR - ❌ Failed to load ML models: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:51:52,075 - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:51:52,103 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.7.224.222:5050
+2025-08-05 21:51:52,103 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-05 21:51:52,104 - INFO -  * Restarting with stat
+2025-08-05 21:51:53,317 - ERROR - ❌ Failed to load ML models: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:51:53,317 - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:51:53,334 - WARNING -  * Debugger is active!
+2025-08-05 21:51:53,347 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 21:56:47,120 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/app.py', reloading
+2025-08-05 21:56:47,259 - INFO -  * Restarting with stat
+2025-08-05 21:56:48,763 - ERROR - ❌ Failed to load ML models: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:56:48,763 - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:56:48,784 - WARNING -  * Debugger is active!
+2025-08-05 21:56:48,793 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 21:57:08,512 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/ml_integration.py', reloading
+2025-08-05 21:57:08,688 - INFO -  * Restarting with stat
+2025-08-05 21:57:10,066 - INFO - ✅ ML models loaded successfully
+2025-08-05 21:57:10,075 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 21:57:10,075 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 21:57:10,075 - INFO - ✅ Models show good prediction variety
+2025-08-05 21:57:10,075 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 21:57:10,096 - WARNING -  * Debugger is active!
+2025-08-05 21:57:10,104 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 21:57:17,871 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/feature_engineering.py', reloading
+2025-08-05 21:57:17,992 - INFO -  * Restarting with stat
+2025-08-05 21:57:19,457 - INFO - ✅ ML models loaded successfully
+2025-08-05 21:57:19,465 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 21:57:19,465 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 21:57:19,465 - INFO - ✅ Models show good prediction variety
+2025-08-05 21:57:19,465 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 21:57:19,488 - WARNING -  * Debugger is active!
+2025-08-05 21:57:19,497 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 21:57:41,379 - INFO - ✅ ML models loaded successfully
+2025-08-05 21:57:41,386 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 21:57:41,386 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 21:57:41,386 - INFO - ✅ Models show good prediction variety
+2025-08-05 21:57:41,386 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 21:57:41,414 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5050
+ * Running on http://10.7.224.222:5050
+2025-08-05 21:57:41,414 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-05 21:57:41,414 - INFO -  * Restarting with stat
+2025-08-05 21:57:42,782 - INFO - ✅ ML models loaded successfully
+2025-08-05 21:57:42,789 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 21:57:42,789 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 21:57:42,789 - INFO - ✅ Models show good prediction variety
+2025-08-05 21:57:42,789 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 21:57:42,809 - WARNING -  * Debugger is active!
+2025-08-05 21:57:42,820 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 21:59:40,215 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/idps_dashboard.py', reloading
+2025-08-05 21:59:40,366 - INFO -  * Restarting with stat
+2025-08-05 21:59:41,931 - INFO - ✅ ML models loaded successfully
+2025-08-05 21:59:41,938 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 21:59:41,938 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 21:59:41,938 - INFO - ✅ Models show good prediction variety
+2025-08-05 21:59:41,938 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 21:59:41,961 - WARNING -  * Debugger is active!
+2025-08-05 21:59:41,970 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 21:59:58,824 - INFO - 127.0.0.1 - - [05/Aug/2025 21:59:58] "GET / HTTP/1.1" 200 -
+2025-08-05 22:00:08,697 - INFO - 127.0.0.1 - - [05/Aug/2025 22:00:08] "GET / HTTP/1.1" 200 -
+2025-08-05 22:00:08,706 - INFO - 127.0.0.1 - - [05/Aug/2025 22:00:08] "GET / HTTP/1.1" 200 -
+2025-08-05 22:00:12,942 - INFO - 127.0.0.1 - - [05/Aug/2025 22:00:12] "GET / HTTP/1.1" 200 -
+2025-08-05 22:00:13,368 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 22:00:13,694 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 22:00:13,697 - INFO - 127.0.0.1 - - [05/Aug/2025 22:00:13] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 22:00:22,536 - INFO - 127.0.0.1 - - [05/Aug/2025 22:00:22] "GET / HTTP/1.1" 200 -
+2025-08-05 22:00:26,430 - INFO - 127.0.0.1 - - [05/Aug/2025 22:00:26] "GET / HTTP/1.1" 200 -
+2025-08-05 22:00:26,486 - INFO - 127.0.0.1 - - [05/Aug/2025 22:00:26] "GET / HTTP/1.1" 200 -
+2025-08-05 22:02:01,666 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:01] "GET / HTTP/1.1" 200 -
+2025-08-05 22:02:01,669 - INFO - Received scan request from IP: 192.168.1.100
+2025-08-05 22:02:02,485 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/signature_rules?select=%2A "HTTP/2 200 OK"
+2025-08-05 22:02:02,490 - INFO - No threat detected from IP 192.168.1.100. Payload clean.
+2025-08-05 22:02:02,491 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:02] "POST /scan HTTP/1.1" 200 -
+2025-08-05 22:02:02,496 - INFO - Received scan request from IP: 192.168.1.101
+2025-08-05 22:02:02,858 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/signature_rules?select=%2A "HTTP/2 200 OK"
+2025-08-05 22:02:02,861 - WARNING - Threat detected from IP 192.168.1.101: XSS (Severity: medium)
+2025-08-05 22:02:03,235 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:02:03,236 - INFO - Threat info saved to Supabase.
+2025-08-05 22:02:03,237 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:03] "POST /scan HTTP/1.1" 200 -
+2025-08-05 22:02:03,624 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:02:03,627 - INFO - Simple ML prediction stored: 1 for IP 192.168.1.200
+2025-08-05 22:02:03,628 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:03] "POST /ml-predict HTTP/1.1" 200 -
+2025-08-05 22:02:03,987 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:02:03,990 - INFO - Simple ML prediction stored: 1 for IP 192.168.1.201
+2025-08-05 22:02:03,991 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:03] "POST /ml-predict HTTP/1.1" 200 -
+2025-08-05 22:02:04,379 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:02:04,384 - INFO - Simple ML prediction stored: -1 for IP 192.168.1.202
+2025-08-05 22:02:04,385 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:04] "POST /ml-predict HTTP/1.1" 200 -
+2025-08-05 22:02:04,391 - INFO - 🔧 Using feature engineering preprocessing...
+2025-08-05 22:02:04,398 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-08-05 22:02:04,403 - INFO - ✅ Features selected: (1, 13)
+2025-08-05 22:02:04,405 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-08-05 22:02:04,430 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(1)}, OCSVM: {np.int64(-1)}
+2025-08-05 22:02:04,430 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-08-05 22:02:04,747 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22src_ip%22%2C%22action_taken%22%2C%22dst_port%22%2C%22model_prediction%22%2C%22dst_ip%22%2C%22ocsvm_score%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-08-05 22:02:04,752 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.203
+2025-08-05 22:02:04,753 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:04] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-05 22:02:05,092 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:02:05,423 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:02:05,734 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:02:05,735 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:05] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:02:12,206 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:12] "GET / HTTP/1.1" 200 -

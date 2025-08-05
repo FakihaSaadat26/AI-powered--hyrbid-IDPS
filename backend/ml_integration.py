@@ -23,9 +23,10 @@ except ImportError as e:
 
 # Configuration
 ML_THRESHOLD = 0.6  # Lowered threshold for better detection
-MODEL_PATH = "isolation_forest_model.joblib"
-SCALER_PATH = "scaler.joblib"
-OCSVM_PATH = "oneclass_svm_model.joblib"
+backend_dir = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(backend_dir, "isolation_forest_model.joblib")
+SCALER_PATH = os.path.join(backend_dir, "scaler.joblib")
+OCSVM_PATH = os.path.join(backend_dir, "oneclass_svm_model.joblib")
 CHECK_INTERVAL = 60
 
 class MLIntegration:

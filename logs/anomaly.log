@@ -1,0 +1,22 @@
+2025-08-05 11:49:29,805 - anomaly_logger - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 11:57:24,832 - anomaly_logger - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 11:57:26,019 - anomaly_logger - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 12:00:48,894 - anomaly_logger - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 12:00:50,060 - anomaly_logger - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:51:52,075 - anomaly_logger - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:51:53,317 - anomaly_logger - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:56:48,763 - anomaly_logger - ERROR - ❌ ML models not found: [Errno 2] No such file or directory: 'isolation_forest_model.joblib'
+2025-08-05 21:57:10,075 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 21:57:19,465 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 21:57:41,386 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 21:57:42,789 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 21:59:41,938 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:02:01,669 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.100
+2025-08-05 22:02:02,490 - anomaly_logger - INFO - No threat detected from IP 192.168.1.100. Payload clean.
+2025-08-05 22:02:02,496 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.101
+2025-08-05 22:02:02,861 - anomaly_logger - WARNING - Threat detected from IP 192.168.1.101: XSS (Severity: medium)
+2025-08-05 22:02:03,236 - anomaly_logger - INFO - Threat info saved to Supabase.
+2025-08-05 22:02:03,627 - anomaly_logger - INFO - Simple ML prediction stored: 1 for IP 192.168.1.200
+2025-08-05 22:02:03,990 - anomaly_logger - INFO - Simple ML prediction stored: 1 for IP 192.168.1.201
+2025-08-05 22:02:04,384 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.1.202
+2025-08-05 22:02:04,752 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.203

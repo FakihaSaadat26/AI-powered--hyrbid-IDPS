@@ -44,7 +44,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Configuration
-API_BASE_URL = "http://localhost:5000"
+API_BASE_URL = "http://localhost:5050"
 
 # Helper function to safely parse datetime columns
 def safe_datetime_parse(df, column_name):

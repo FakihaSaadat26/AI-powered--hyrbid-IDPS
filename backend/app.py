@@ -32,8 +32,10 @@ try:
     import numpy as np
     from feature_engineering import clean_data, select_features
     # Load ML model and scaler at startup
-    iso_forest = joblib.load('isolation_forest_model.joblib')
-    scaler = joblib.load('scaler.joblib')
+    import os
+    backend_dir = os.path.dirname(os.path.abspath(__file__))
+    iso_forest = joblib.load(os.path.join(backend_dir, 'isolation_forest_model.joblib'))
+    scaler = joblib.load(os.path.join(backend_dir, 'scaler.joblib'))
     SIMPLE_ML_AVAILABLE = True
     print("✅ Simple ML models loaded successfully")
 except Exception as e:
@@ -507,4 +509,4 @@ if __name__ == "__main__":
         print("❌ Advanced ML: Not available")
         
     print("=" * 50)
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=True, host='0.0.0.0', port=5050)

@@ -258,9 +258,11 @@ def test_model_predictions():
     print("🧪 Testing model predictions with known samples...")
     
     # Load the saved models
-    iso_forest = joblib.load('isolation_forest_model.joblib')
-    ocsvm = joblib.load('oneclass_svm_model.joblib')
-    scaler = joblib.load('scaler.joblib')
+    import os
+    backend_dir = os.path.dirname(os.path.abspath(__file__))
+    iso_forest = joblib.load(os.path.join(backend_dir, 'isolation_forest_model.joblib'))
+    ocsvm = joblib.load(os.path.join(backend_dir, 'oneclass_svm_model.joblib'))
+    scaler = joblib.load(os.path.join(backend_dir, 'scaler.joblib'))
     
     # Test samples
     normal_sample = {
