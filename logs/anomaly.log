@@ -20,3 +20,38 @@
 2025-08-05 22:02:03,990 - anomaly_logger - INFO - Simple ML prediction stored: 1 for IP 192.168.1.201
 2025-08-05 22:02:04,384 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.1.202
 2025-08-05 22:02:04,752 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.203
+2025-08-05 22:07:13,798 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.1.999
+2025-08-05 22:07:14,167 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.999
+2025-08-05 22:07:14,171 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.888
+2025-08-05 22:07:14,530 - anomaly_logger - INFO - No threat detected from IP 192.168.1.888. Payload clean.
+2025-08-05 22:07:27,214 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.1.999
+2025-08-05 22:07:27,555 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.999
+2025-08-05 22:07:27,561 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.888
+2025-08-05 22:07:27,887 - anomaly_logger - INFO - No threat detected from IP 192.168.1.888. Payload clean.
+2025-08-05 22:09:08,154 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.1.999
+2025-08-05 22:09:08,503 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.999
+2025-08-05 22:09:08,509 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.888
+2025-08-05 22:09:08,823 - anomaly_logger - INFO - No threat detected from IP 192.168.1.888. Payload clean.
+2025-08-05 22:09:41,366 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.1.666
+2025-08-05 22:09:41,816 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.666
+2025-08-05 22:09:41,818 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.700
+2025-08-05 22:09:42,152 - anomaly_logger - INFO - No threat detected from IP 192.168.1.700. Payload clean.
+2025-08-05 22:09:42,156 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.701
+2025-08-05 22:09:42,497 - anomaly_logger - WARNING - Threat detected from IP 192.168.1.701: XSS (Severity: medium)
+2025-08-05 22:09:42,822 - anomaly_logger - INFO - Threat info saved to Supabase.
+2025-08-05 22:09:42,827 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.702
+2025-08-05 22:09:43,136 - anomaly_logger - INFO - No threat detected from IP 192.168.1.702. Payload clean.
+2025-08-05 22:09:43,141 - anomaly_logger - INFO - Received scan request from IP: 192.168.1.703
+2025-08-05 22:09:43,455 - anomaly_logger - INFO - No threat detected from IP 192.168.1.703. Payload clean.
+2025-08-05 22:10:25,849 - anomaly_logger - INFO - Simple ML prediction stored: -1 for IP 192.168.1.999
+2025-08-05 22:10:26,210 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.999
+2025-08-05 22:10:26,556 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.888
+2025-08-05 22:10:26,925 - anomaly_logger - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.777
+2025-08-05 22:11:15,777 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:11:35,046 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:11:45,469 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:19:35,883 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:23:32,101 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:25:55,221 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:26:26,248 - anomaly_logger - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:26:43,200 - anomaly_logger - INFO - ✅ ML Integration initialized successfully

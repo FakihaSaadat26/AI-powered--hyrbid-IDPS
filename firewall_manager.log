@@ -131,3 +131,816 @@
 2025-08-05 22:02:05,734 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
 2025-08-05 22:02:05,735 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:05] "GET /run-rule-engine HTTP/1.1" 200 -
 2025-08-05 22:02:12,206 - INFO - 127.0.0.1 - - [05/Aug/2025 22:02:12] "GET / HTTP/1.1" 200 -
+2025-08-05 22:05:38,036 - INFO - 127.0.0.1 - - [05/Aug/2025 22:05:38] "GET / HTTP/1.1" 200 -
+2025-08-05 22:07:12,419 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:12] "GET / HTTP/1.1" 200 -
+2025-08-05 22:07:13,110 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 22:07:13,434 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 22:07:13,435 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:13] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 22:07:13,795 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:07:13,798 - INFO - Simple ML prediction stored: -1 for IP 192.168.1.999
+2025-08-05 22:07:13,798 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:13] "POST /ml-predict HTTP/1.1" 200 -
+2025-08-05 22:07:13,803 - INFO - 🔧 Using feature engineering preprocessing...
+2025-08-05 22:07:13,807 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-08-05 22:07:13,812 - INFO - ✅ Features selected: (1, 13)
+2025-08-05 22:07:13,813 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-08-05 22:07:13,834 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-08-05 22:07:13,834 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-08-05 22:07:14,165 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22src_ip%22%2C%22action_taken%22%2C%22dst_port%22%2C%22model_prediction%22%2C%22dst_ip%22%2C%22ocsvm_score%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-08-05 22:07:14,167 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.999
+2025-08-05 22:07:14,168 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:14] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-05 22:07:14,171 - INFO - Received scan request from IP: 192.168.1.888
+2025-08-05 22:07:14,526 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/signature_rules?select=%2A "HTTP/2 200 OK"
+2025-08-05 22:07:14,530 - INFO - No threat detected from IP 192.168.1.888. Payload clean.
+2025-08-05 22:07:14,530 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:14] "POST /scan HTTP/1.1" 200 -
+2025-08-05 22:07:19,006 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:19] "GET / HTTP/1.1" 200 -
+2025-08-05 22:07:26,138 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:26] "GET / HTTP/1.1" 200 -
+2025-08-05 22:07:26,548 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 22:07:26,866 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 22:07:26,867 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:26] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 22:07:27,212 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:07:27,214 - INFO - Simple ML prediction stored: -1 for IP 192.168.1.999
+2025-08-05 22:07:27,215 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:27] "POST /ml-predict HTTP/1.1" 200 -
+2025-08-05 22:07:27,218 - INFO - 🔧 Using feature engineering preprocessing...
+2025-08-05 22:07:27,220 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-08-05 22:07:27,223 - INFO - ✅ Features selected: (1, 13)
+2025-08-05 22:07:27,223 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-08-05 22:07:27,239 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-08-05 22:07:27,239 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-08-05 22:07:27,552 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22src_ip%22%2C%22action_taken%22%2C%22dst_port%22%2C%22model_prediction%22%2C%22dst_ip%22%2C%22ocsvm_score%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-08-05 22:07:27,555 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.999
+2025-08-05 22:07:27,556 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:27] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-05 22:07:27,561 - INFO - Received scan request from IP: 192.168.1.888
+2025-08-05 22:07:27,883 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/signature_rules?select=%2A "HTTP/2 200 OK"
+2025-08-05 22:07:27,887 - INFO - No threat detected from IP 192.168.1.888. Payload clean.
+2025-08-05 22:07:27,888 - INFO - 127.0.0.1 - - [05/Aug/2025 22:07:27] "POST /scan HTTP/1.1" 200 -
+2025-08-05 22:08:24,920 - INFO - Created IDPS_BLOCK chain
+2025-08-05 22:08:24,975 - INFO - Added IDPS_BLOCK to INPUT chain
+2025-08-05 22:08:24,975 - INFO - 🔍 Starting firewall threat monitoring...
+2025-08-05 22:08:24,995 - ERROR - Rule engine API error: 403
+2025-08-05 22:08:55,002 - ERROR - Rule engine API error: 403
+2025-08-05 22:09:06,504 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:06] "GET / HTTP/1.1" 200 -
+2025-08-05 22:09:07,388 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 22:09:07,798 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 22:09:07,799 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:07] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 22:09:08,152 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:09:08,154 - INFO - Simple ML prediction stored: -1 for IP 192.168.1.999
+2025-08-05 22:09:08,155 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:08] "POST /ml-predict HTTP/1.1" 200 -
+2025-08-05 22:09:08,158 - INFO - 🔧 Using feature engineering preprocessing...
+2025-08-05 22:09:08,161 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-08-05 22:09:08,164 - INFO - ✅ Features selected: (1, 13)
+2025-08-05 22:09:08,164 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-08-05 22:09:08,180 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-08-05 22:09:08,181 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-08-05 22:09:08,499 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22src_ip%22%2C%22action_taken%22%2C%22dst_port%22%2C%22model_prediction%22%2C%22dst_ip%22%2C%22ocsvm_score%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-08-05 22:09:08,503 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.999
+2025-08-05 22:09:08,504 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:08] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-05 22:09:08,509 - INFO - Received scan request from IP: 192.168.1.888
+2025-08-05 22:09:08,817 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/signature_rules?select=%2A "HTTP/2 200 OK"
+2025-08-05 22:09:08,823 - INFO - No threat detected from IP 192.168.1.888. Payload clean.
+2025-08-05 22:09:08,823 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:08] "POST /scan HTTP/1.1" 200 -
+2025-08-05 22:09:25,008 - ERROR - Rule engine API error: 403
+2025-08-05 22:09:40,642 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 22:09:40,981 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 22:09:40,982 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:40] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 22:09:40,986 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:40] "GET / HTTP/1.1" 200 -
+2025-08-05 22:09:41,363 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:09:41,366 - INFO - Simple ML prediction stored: -1 for IP 192.168.1.666
+2025-08-05 22:09:41,367 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:41] "POST /ml-predict HTTP/1.1" 200 -
+2025-08-05 22:09:41,372 - INFO - 🔧 Using feature engineering preprocessing...
+2025-08-05 22:09:41,376 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-08-05 22:09:41,380 - INFO - ✅ Features selected: (1, 13)
+2025-08-05 22:09:41,381 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-08-05 22:09:41,402 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-08-05 22:09:41,402 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-08-05 22:09:41,814 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22src_ip%22%2C%22action_taken%22%2C%22dst_port%22%2C%22model_prediction%22%2C%22dst_ip%22%2C%22ocsvm_score%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-08-05 22:09:41,816 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.666
+2025-08-05 22:09:41,816 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:41] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-05 22:09:41,818 - INFO - Received scan request from IP: 192.168.1.700
+2025-08-05 22:09:42,149 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/signature_rules?select=%2A "HTTP/2 200 OK"
+2025-08-05 22:09:42,152 - INFO - No threat detected from IP 192.168.1.700. Payload clean.
+2025-08-05 22:09:42,152 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:42] "POST /scan HTTP/1.1" 200 -
+2025-08-05 22:09:42,156 - INFO - Received scan request from IP: 192.168.1.701
+2025-08-05 22:09:42,493 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/signature_rules?select=%2A "HTTP/2 200 OK"
+2025-08-05 22:09:42,497 - WARNING - Threat detected from IP 192.168.1.701: XSS (Severity: medium)
+2025-08-05 22:09:42,821 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:09:42,822 - INFO - Threat info saved to Supabase.
+2025-08-05 22:09:42,823 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:42] "POST /scan HTTP/1.1" 200 -
+2025-08-05 22:09:42,827 - INFO - Received scan request from IP: 192.168.1.702
+2025-08-05 22:09:43,133 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/signature_rules?select=%2A "HTTP/2 200 OK"
+2025-08-05 22:09:43,136 - INFO - No threat detected from IP 192.168.1.702. Payload clean.
+2025-08-05 22:09:43,136 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:43] "POST /scan HTTP/1.1" 200 -
+2025-08-05 22:09:43,141 - INFO - Received scan request from IP: 192.168.1.703
+2025-08-05 22:09:43,447 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/signature_rules?select=%2A "HTTP/2 200 OK"
+2025-08-05 22:09:43,455 - INFO - No threat detected from IP 192.168.1.703. Payload clean.
+2025-08-05 22:09:43,456 - INFO - 127.0.0.1 - - [05/Aug/2025 22:09:43] "POST /scan HTTP/1.1" 200 -
+2025-08-05 22:09:55,017 - ERROR - Rule engine API error: 403
+2025-08-05 22:10:25,845 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/alerts "HTTP/2 201 Created"
+2025-08-05 22:10:25,849 - INFO - Simple ML prediction stored: -1 for IP 192.168.1.999
+2025-08-05 22:10:25,850 - INFO - 127.0.0.1 - - [05/Aug/2025 22:10:25] "POST /ml-predict HTTP/1.1" 200 -
+2025-08-05 22:10:25,856 - INFO - 🔧 Using feature engineering preprocessing...
+2025-08-05 22:10:25,862 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-08-05 22:10:25,866 - INFO - ✅ Features selected: (1, 13)
+2025-08-05 22:10:25,867 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-08-05 22:10:25,894 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-08-05 22:10:25,894 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-08-05 22:10:26,208 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22src_ip%22%2C%22action_taken%22%2C%22dst_port%22%2C%22model_prediction%22%2C%22dst_ip%22%2C%22ocsvm_score%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-08-05 22:10:26,210 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.999
+2025-08-05 22:10:26,211 - INFO - 127.0.0.1 - - [05/Aug/2025 22:10:26] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-05 22:10:26,214 - INFO - 🔧 Using feature engineering preprocessing...
+2025-08-05 22:10:26,218 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-08-05 22:10:26,221 - INFO - ✅ Features selected: (1, 13)
+2025-08-05 22:10:26,222 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-08-05 22:10:26,240 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-08-05 22:10:26,240 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-08-05 22:10:26,554 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22src_ip%22%2C%22action_taken%22%2C%22dst_port%22%2C%22model_prediction%22%2C%22dst_ip%22%2C%22ocsvm_score%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-08-05 22:10:26,556 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.888
+2025-08-05 22:10:26,557 - INFO - 127.0.0.1 - - [05/Aug/2025 22:10:26] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-05 22:10:26,561 - INFO - 🔧 Using feature engineering preprocessing...
+2025-08-05 22:10:26,565 - INFO - ✅ Data cleaned: 1 records after cleaning
+2025-08-05 22:10:26,568 - INFO - ✅ Features selected: (1, 13)
+2025-08-05 22:10:26,569 - INFO - ✅ Preprocessed 1 records using feature engineering
+2025-08-05 22:10:26,586 - INFO - 🔍 Prediction variety - IsoForest: {np.int64(-1)}, OCSVM: {np.int64(-1)}
+2025-08-05 22:10:26,586 - INFO - 🎯 ML predictions: 1 total, 1 anomalies detected
+2025-08-05 22:10:26,919 - INFO - HTTP Request: POST https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?columns=%22created_at%22%2C%22src_ip%22%2C%22action_taken%22%2C%22dst_port%22%2C%22model_prediction%22%2C%22dst_ip%22%2C%22ocsvm_score%22%2C%22isolation_forest_score%22%2C%22anomaly_score%22 "HTTP/2 201 Created"
+2025-08-05 22:10:26,925 - WARNING - 🚨 Advanced ML API detected anomaly from 192.168.1.777
+2025-08-05 22:10:26,926 - INFO - 127.0.0.1 - - [05/Aug/2025 22:10:26] "POST /ml-predict-advanced HTTP/1.1" 200 -
+2025-08-05 22:10:27,270 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 22:10:27,669 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 22:10:27,671 - INFO - 127.0.0.1 - - [05/Aug/2025 22:10:27] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 22:10:27,987 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 22:10:28,325 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 22:10:28,326 - INFO - 127.0.0.1 - - [05/Aug/2025 22:10:28] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 22:11:14,125 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/firewall_manager.py', reloading
+2025-08-05 22:11:14,259 - INFO -  * Restarting with stat
+2025-08-05 22:11:15,770 - INFO - ✅ ML models loaded successfully
+2025-08-05 22:11:15,777 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 22:11:15,777 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 22:11:15,777 - INFO - ✅ Models show good prediction variety
+2025-08-05 22:11:15,777 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:11:15,798 - WARNING -  * Debugger is active!
+2025-08-05 22:11:15,807 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 22:11:33,333 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/app.py', reloading
+2025-08-05 22:11:33,467 - INFO -  * Restarting with stat
+2025-08-05 22:11:35,039 - INFO - ✅ ML models loaded successfully
+2025-08-05 22:11:35,046 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 22:11:35,046 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 22:11:35,046 - INFO - ✅ Models show good prediction variety
+2025-08-05 22:11:35,046 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:11:35,065 - WARNING -  * Debugger is active!
+2025-08-05 22:11:35,073 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 22:11:43,824 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/firewall_manager.py', reloading
+2025-08-05 22:11:43,935 - INFO -  * Restarting with stat
+2025-08-05 22:11:45,462 - INFO - ✅ ML models loaded successfully
+2025-08-05 22:11:45,469 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 22:11:45,469 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 22:11:45,469 - INFO - ✅ Models show good prediction variety
+2025-08-05 22:11:45,469 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:11:45,491 - WARNING -  * Debugger is active!
+2025-08-05 22:11:45,499 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 22:11:59,129 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:11:59,156 - INFO - 127.0.0.1 - - [05/Aug/2025 22:11:59] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:12:28,843 - INFO - Created IDPS_BLOCK chain
+2025-08-05 22:12:28,859 - INFO - Added IDPS_BLOCK to INPUT chain
+2025-08-05 22:12:28,859 - INFO - 🔍 Starting firewall threat monitoring...
+2025-08-05 22:12:28,865 - ERROR - Rule engine API error: 403
+2025-08-05 22:12:28,867 - ERROR - ML alerts API error: 403
+2025-08-05 22:12:38,902 - INFO - 127.0.0.1 - - [05/Aug/2025 22:12:38] "GET / HTTP/1.1" 200 -
+2025-08-05 22:12:58,880 - ERROR - Rule engine API error: 403
+2025-08-05 22:12:58,886 - ERROR - ML alerts API error: 403
+2025-08-05 22:13:28,894 - ERROR - Rule engine API error: 403
+2025-08-05 22:13:28,897 - ERROR - ML alerts API error: 403
+2025-08-05 22:13:58,916 - ERROR - Rule engine API error: 403
+2025-08-05 22:13:58,922 - ERROR - ML alerts API error: 403
+2025-08-05 22:14:28,945 - ERROR - Rule engine API error: 403
+2025-08-05 22:14:28,951 - ERROR - ML alerts API error: 403
+2025-08-05 22:14:58,962 - ERROR - Rule engine API error: 403
+2025-08-05 22:14:58,966 - ERROR - ML alerts API error: 403
+2025-08-05 22:15:28,977 - ERROR - Rule engine API error: 403
+2025-08-05 22:15:28,981 - ERROR - ML alerts API error: 403
+2025-08-05 22:15:58,992 - ERROR - Rule engine API error: 403
+2025-08-05 22:15:58,996 - ERROR - ML alerts API error: 403
+2025-08-05 22:16:29,005 - ERROR - Rule engine API error: 403
+2025-08-05 22:16:29,008 - ERROR - ML alerts API error: 403
+2025-08-05 22:16:59,018 - ERROR - Rule engine API error: 403
+2025-08-05 22:16:59,022 - ERROR - ML alerts API error: 403
+2025-08-05 22:17:29,031 - ERROR - Rule engine API error: 403
+2025-08-05 22:17:29,036 - ERROR - ML alerts API error: 403
+2025-08-05 22:17:59,047 - ERROR - Rule engine API error: 403
+2025-08-05 22:17:59,053 - ERROR - ML alerts API error: 403
+2025-08-05 22:18:29,063 - ERROR - Rule engine API error: 403
+2025-08-05 22:18:29,067 - ERROR - ML alerts API error: 403
+2025-08-05 22:18:59,072 - ERROR - Rule engine API error: 403
+2025-08-05 22:18:59,075 - ERROR - ML alerts API error: 403
+2025-08-05 22:19:29,084 - ERROR - Rule engine API error: 403
+2025-08-05 22:19:29,086 - ERROR - ML alerts API error: 403
+2025-08-05 22:19:34,109 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/firewall_manager.py', reloading
+2025-08-05 22:19:34,259 - INFO -  * Restarting with stat
+2025-08-05 22:19:35,876 - INFO - ✅ ML models loaded successfully
+2025-08-05 22:19:35,883 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 22:19:35,883 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 22:19:35,883 - INFO - ✅ Models show good prediction variety
+2025-08-05 22:19:35,883 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:19:35,903 - WARNING -  * Debugger is active!
+2025-08-05 22:19:35,913 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 22:20:09,919 - INFO - Created IDPS_BLOCK chain
+2025-08-05 22:20:09,933 - INFO - Added IDPS_BLOCK to INPUT chain
+2025-08-05 22:20:09,933 - INFO - 🔍 Starting firewall threat monitoring...
+2025-08-05 22:20:12,666 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:20:13,392 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:20:13,972 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:20:13,973 - INFO - 127.0.0.1 - - [05/Aug/2025 22:20:13] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:20:13,974 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:20:14,579 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:20:14,584 - INFO - 127.0.0.1 - - [05/Aug/2025 22:20:14] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:20:14,585 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:20:20,978 - INFO - 127.0.0.1 - - [05/Aug/2025 22:20:20] "GET / HTTP/1.1" 200 -
+2025-08-05 22:20:47,042 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:20:47,799 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:20:47,908 - INFO - 127.0.0.1 - - [05/Aug/2025 22:20:47] "GET / HTTP/1.1" 200 -
+2025-08-05 22:20:48,375 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:20:48,376 - INFO - 127.0.0.1 - - [05/Aug/2025 22:20:48] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:20:48,377 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:20:49,159 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:20:49,162 - INFO - 127.0.0.1 - - [05/Aug/2025 22:20:49] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:20:49,164 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:20:52,683 - INFO - 127.0.0.1 - - [05/Aug/2025 22:20:52] "GET / HTTP/1.1" 200 -
+2025-08-05 22:20:56,063 - INFO - 127.0.0.1 - - [05/Aug/2025 22:20:56] "GET / HTTP/1.1" 200 -
+2025-08-05 22:21:03,824 - INFO - 127.0.0.1 - - [05/Aug/2025 22:21:03] "GET / HTTP/1.1" 200 -
+2025-08-05 22:21:05,951 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 22:21:06,571 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 22:21:06,572 - INFO - 127.0.0.1 - - [05/Aug/2025 22:21:06] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 22:21:13,177 - INFO - 127.0.0.1 - - [05/Aug/2025 22:21:13] "GET / HTTP/1.1" 200 -
+2025-08-05 22:21:21,375 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:21:21,946 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:21:22,516 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:21:22,516 - INFO - 127.0.0.1 - - [05/Aug/2025 22:21:22] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:21:22,517 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:21:23,110 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:21:23,149 - INFO - 127.0.0.1 - - [05/Aug/2025 22:21:23] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:21:23,152 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:21:35,676 - INFO - 127.0.0.1 - - [05/Aug/2025 22:21:35] "GET / HTTP/1.1" 200 -
+2025-08-05 22:21:55,569 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:21:56,253 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:21:56,754 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:21:56,755 - INFO - 127.0.0.1 - - [05/Aug/2025 22:21:56] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:21:56,756 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:21:57,002 - INFO - 🛑 Monitoring stopped by user
+2025-08-05 22:21:57,458 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:21:57,462 - INFO - 127.0.0.1 - - [05/Aug/2025 22:21:57] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:22:11,491 - INFO - Created IDPS_BLOCK chain
+2025-08-05 22:22:11,509 - INFO - Added IDPS_BLOCK to INPUT chain
+2025-08-05 22:22:11,510 - INFO - 🔍 Starting firewall threat monitoring...
+2025-08-05 22:22:12,162 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:22:12,498 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:22:12,906 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:22:12,907 - INFO - 127.0.0.1 - - [05/Aug/2025 22:22:12] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:22:12,907 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:22:13,216 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:22:13,220 - INFO - 127.0.0.1 - - [05/Aug/2025 22:22:13] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:22:13,222 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:22:23,088 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:22:23,096 - INFO - 127.0.0.1 - - [05/Aug/2025 22:22:23] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:22:34,154 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:22:34,159 - INFO - 127.0.0.1 - - [05/Aug/2025 22:22:34] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:22:40,380 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:22:40,385 - INFO - 127.0.0.1 - - [05/Aug/2025 22:22:40] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:22:53,234 - ERROR - Error checking for threats: HTTPConnectionPool(host='localhost', port=5050): Read timed out. (read timeout=10)
+2025-08-05 22:22:59,017 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:23:01,603 - INFO - 127.0.0.1 - - [05/Aug/2025 22:23:01] "GET / HTTP/1.1" 200 -
+2025-08-05 22:23:01,618 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:23:01,622 - INFO - 127.0.0.1 - - [05/Aug/2025 22:23:01] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:23:02,450 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:23:02,765 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:23:02,765 - INFO - 127.0.0.1 - - [05/Aug/2025 22:23:02] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:23:24,703 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:23:25,130 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:23:25,477 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:23:25,478 - INFO - 127.0.0.1 - - [05/Aug/2025 22:23:25] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:23:25,479 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:23:25,807 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:23:25,945 - INFO - 127.0.0.1 - - [05/Aug/2025 22:23:25] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:23:25,946 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:23:30,349 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/firewall_manager.py', reloading
+2025-08-05 22:23:30,479 - INFO -  * Restarting with stat
+2025-08-05 22:23:32,094 - INFO - ✅ ML models loaded successfully
+2025-08-05 22:23:32,101 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 22:23:32,101 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 22:23:32,101 - INFO - ✅ Models show good prediction variety
+2025-08-05 22:23:32,101 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:23:32,125 - WARNING -  * Debugger is active!
+2025-08-05 22:23:32,133 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 22:23:46,907 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:23:46,915 - INFO - 127.0.0.1 - - [05/Aug/2025 22:23:46] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:23:56,724 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:23:57,042 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:23:57,351 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:23:57,351 - INFO - 127.0.0.1 - - [05/Aug/2025 22:23:57] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:23:57,352 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:23:57,676 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:23:57,680 - INFO - 127.0.0.1 - - [05/Aug/2025 22:23:57] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:23:57,681 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:24:00,756 - INFO - 127.0.0.1 - - [05/Aug/2025 22:24:00] "GET / HTTP/1.1" 200 -
+2025-08-05 22:24:05,985 - INFO - 🛑 Monitoring stopped by user
+2025-08-05 22:24:12,850 - INFO - Created IDPS_BLOCK chain
+2025-08-05 22:24:12,864 - INFO - Added IDPS_BLOCK to INPUT chain
+2025-08-05 22:24:12,865 - INFO - 🔍 Starting firewall threat monitoring...
+2025-08-05 22:24:13,269 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:24:13,582 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:24:13,903 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:24:13,904 - INFO - 127.0.0.1 - - [05/Aug/2025 22:24:13] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:24:13,904 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:24:14,213 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:24:14,216 - INFO - 127.0.0.1 - - [05/Aug/2025 22:24:14] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:24:14,217 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:24:14,236 - ERROR - Failed to block 192.168.1.777: sudo: iptables: command not found
+
+2025-08-05 22:24:14,236 - ERROR - ❌ Failed to block 192.168.1.777: FirewallManager returned False
+2025-08-05 22:24:14,253 - ERROR - Failed to block 192.168.1.888: sudo: iptables: command not found
+
+2025-08-05 22:24:14,253 - ERROR - ❌ Failed to block 192.168.1.888: FirewallManager returned False
+2025-08-05 22:24:14,269 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:24:14,269 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:24:14,284 - ERROR - Failed to block 192.168.1.666: sudo: iptables: command not found
+
+2025-08-05 22:24:14,284 - ERROR - ❌ Failed to block 192.168.1.666: FirewallManager returned False
+2025-08-05 22:24:14,300 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:24:14,301 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:24:14,316 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:24:14,316 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:24:14,332 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:24:14,332 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:24:14,348 - ERROR - Failed to block 192.168.1.203: sudo: iptables: command not found
+
+2025-08-05 22:24:14,348 - ERROR - ❌ Failed to block 192.168.1.203: FirewallManager returned False
+2025-08-05 22:24:14,363 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:14,364 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:14,379 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:14,379 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:14,395 - ERROR - Failed to block 192.168.100.50: sudo: iptables: command not found
+
+2025-08-05 22:24:14,395 - ERROR - ❌ Failed to block 192.168.100.50: FirewallManager returned False
+2025-08-05 22:24:14,410 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:14,410 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:14,426 - ERROR - Failed to block 192.168.10.5: sudo: iptables: command not found
+
+2025-08-05 22:24:14,426 - ERROR - ❌ Failed to block 192.168.10.5: FirewallManager returned False
+2025-08-05 22:24:14,441 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:14,441 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:14,456 - ERROR - Failed to block 192.168.1.50: sudo: iptables: command not found
+
+2025-08-05 22:24:14,457 - ERROR - ❌ Failed to block 192.168.1.50: FirewallManager returned False
+2025-08-05 22:24:14,472 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:14,472 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:14,488 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:24:14,488 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:24:14,503 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:24:14,503 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:24:26,977 - INFO - 127.0.0.1 - - [05/Aug/2025 22:24:26] "GET / HTTP/1.1" 200 -
+2025-08-05 22:24:44,917 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:24:45,228 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:24:45,536 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:24:45,537 - INFO - 127.0.0.1 - - [05/Aug/2025 22:24:45] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:24:45,537 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:24:45,863 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:24:45,867 - INFO - 127.0.0.1 - - [05/Aug/2025 22:24:45] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:24:45,868 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:24:45,890 - ERROR - Failed to block 192.168.1.777: sudo: iptables: command not found
+
+2025-08-05 22:24:45,890 - ERROR - ❌ Failed to block 192.168.1.777: FirewallManager returned False
+2025-08-05 22:24:45,906 - ERROR - Failed to block 192.168.1.888: sudo: iptables: command not found
+
+2025-08-05 22:24:45,906 - ERROR - ❌ Failed to block 192.168.1.888: FirewallManager returned False
+2025-08-05 22:24:45,922 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:24:45,922 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:24:45,936 - ERROR - Failed to block 192.168.1.666: sudo: iptables: command not found
+
+2025-08-05 22:24:45,936 - ERROR - ❌ Failed to block 192.168.1.666: FirewallManager returned False
+2025-08-05 22:24:45,951 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:24:45,952 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:24:45,967 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:24:45,967 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:24:45,983 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:24:45,983 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:24:45,999 - ERROR - Failed to block 192.168.1.203: sudo: iptables: command not found
+
+2025-08-05 22:24:45,999 - ERROR - ❌ Failed to block 192.168.1.203: FirewallManager returned False
+2025-08-05 22:24:46,015 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:46,015 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:46,030 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:46,031 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:46,046 - ERROR - Failed to block 192.168.100.50: sudo: iptables: command not found
+
+2025-08-05 22:24:46,046 - ERROR - ❌ Failed to block 192.168.100.50: FirewallManager returned False
+2025-08-05 22:24:46,062 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:46,062 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:46,078 - ERROR - Failed to block 192.168.10.5: sudo: iptables: command not found
+
+2025-08-05 22:24:46,078 - ERROR - ❌ Failed to block 192.168.10.5: FirewallManager returned False
+2025-08-05 22:24:46,094 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:46,094 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:46,110 - ERROR - Failed to block 192.168.1.50: sudo: iptables: command not found
+
+2025-08-05 22:24:46,110 - ERROR - ❌ Failed to block 192.168.1.50: FirewallManager returned False
+2025-08-05 22:24:46,126 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:24:46,126 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:24:46,142 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:24:46,143 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:24:46,159 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:24:46,159 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:25:12,762 - INFO - Created IDPS_BLOCK chain
+2025-08-05 22:25:12,777 - INFO - Added IDPS_BLOCK to INPUT chain
+2025-08-05 22:25:12,777 - INFO - 🔍 Starting firewall threat monitoring...
+2025-08-05 22:25:13,183 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:25:13,523 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:25:13,833 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:25:13,834 - INFO - 127.0.0.1 - - [05/Aug/2025 22:25:13] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:25:13,834 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:25:14,149 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:25:14,152 - INFO - 127.0.0.1 - - [05/Aug/2025 22:25:14] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:25:14,152 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:25:14,169 - ERROR - Failed to block 192.168.1.777: sudo: iptables: command not found
+
+2025-08-05 22:25:14,169 - ERROR - ❌ Failed to block 192.168.1.777: FirewallManager returned False
+2025-08-05 22:25:14,186 - ERROR - Failed to block 192.168.1.888: sudo: iptables: command not found
+
+2025-08-05 22:25:14,186 - ERROR - ❌ Failed to block 192.168.1.888: FirewallManager returned False
+2025-08-05 22:25:14,202 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:25:14,203 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:25:14,219 - ERROR - Failed to block 192.168.1.666: sudo: iptables: command not found
+
+2025-08-05 22:25:14,220 - ERROR - ❌ Failed to block 192.168.1.666: FirewallManager returned False
+2025-08-05 22:25:14,236 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:25:14,237 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:25:14,252 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:25:14,252 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:25:14,268 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:25:14,268 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:25:14,285 - ERROR - Failed to block 192.168.1.203: sudo: iptables: command not found
+
+2025-08-05 22:25:14,285 - ERROR - ❌ Failed to block 192.168.1.203: FirewallManager returned False
+2025-08-05 22:25:14,302 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:14,302 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:14,319 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:14,319 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:14,336 - ERROR - Failed to block 192.168.100.50: sudo: iptables: command not found
+
+2025-08-05 22:25:14,336 - ERROR - ❌ Failed to block 192.168.100.50: FirewallManager returned False
+2025-08-05 22:25:14,353 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:14,353 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:14,368 - ERROR - Failed to block 192.168.10.5: sudo: iptables: command not found
+
+2025-08-05 22:25:14,369 - ERROR - ❌ Failed to block 192.168.10.5: FirewallManager returned False
+2025-08-05 22:25:14,384 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:14,384 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:14,400 - ERROR - Failed to block 192.168.1.50: sudo: iptables: command not found
+
+2025-08-05 22:25:14,400 - ERROR - ❌ Failed to block 192.168.1.50: FirewallManager returned False
+2025-08-05 22:25:14,416 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:14,416 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:14,432 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:25:14,432 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:25:14,449 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:25:14,449 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:25:45,253 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:25:45,585 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:25:45,912 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:25:45,913 - INFO - 127.0.0.1 - - [05/Aug/2025 22:25:45] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:25:45,913 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:25:46,259 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:25:46,262 - INFO - 127.0.0.1 - - [05/Aug/2025 22:25:46] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:25:46,263 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:25:46,284 - ERROR - Failed to block 192.168.1.777: sudo: iptables: command not found
+
+2025-08-05 22:25:46,284 - ERROR - ❌ Failed to block 192.168.1.777: FirewallManager returned False
+2025-08-05 22:25:46,301 - ERROR - Failed to block 192.168.1.888: sudo: iptables: command not found
+
+2025-08-05 22:25:46,301 - ERROR - ❌ Failed to block 192.168.1.888: FirewallManager returned False
+2025-08-05 22:25:46,375 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:25:46,376 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:25:46,405 - ERROR - Failed to block 192.168.1.666: sudo: iptables: command not found
+
+2025-08-05 22:25:46,405 - ERROR - ❌ Failed to block 192.168.1.666: FirewallManager returned False
+2025-08-05 22:25:46,420 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:25:46,420 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:25:46,435 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:25:46,435 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:25:46,451 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:25:46,451 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:25:46,466 - ERROR - Failed to block 192.168.1.203: sudo: iptables: command not found
+
+2025-08-05 22:25:46,467 - ERROR - ❌ Failed to block 192.168.1.203: FirewallManager returned False
+2025-08-05 22:25:46,482 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:46,482 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:46,498 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:46,498 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:46,514 - ERROR - Failed to block 192.168.100.50: sudo: iptables: command not found
+
+2025-08-05 22:25:46,514 - ERROR - ❌ Failed to block 192.168.100.50: FirewallManager returned False
+2025-08-05 22:25:46,530 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:46,531 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:46,547 - ERROR - Failed to block 192.168.10.5: sudo: iptables: command not found
+
+2025-08-05 22:25:46,547 - ERROR - ❌ Failed to block 192.168.10.5: FirewallManager returned False
+2025-08-05 22:25:46,564 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:46,564 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:46,581 - ERROR - Failed to block 192.168.1.50: sudo: iptables: command not found
+
+2025-08-05 22:25:46,581 - ERROR - ❌ Failed to block 192.168.1.50: FirewallManager returned False
+2025-08-05 22:25:46,596 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:25:46,597 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:25:46,612 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:25:46,612 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:25:46,629 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:25:46,630 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:25:53,514 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/firewall_manager.py', reloading
+2025-08-05 22:25:53,639 - INFO -  * Restarting with stat
+2025-08-05 22:25:55,215 - INFO - ✅ ML models loaded successfully
+2025-08-05 22:25:55,221 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 22:25:55,221 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 22:25:55,221 - INFO - ✅ Models show good prediction variety
+2025-08-05 22:25:55,221 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:25:55,243 - WARNING -  * Debugger is active!
+2025-08-05 22:25:55,251 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 22:26:17,058 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:26:17,364 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:26:17,670 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:26:17,672 - INFO - 127.0.0.1 - - [05/Aug/2025 22:26:17] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:26:17,672 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:26:17,984 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:26:17,987 - INFO - 127.0.0.1 - - [05/Aug/2025 22:26:17] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:26:17,988 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:26:18,008 - ERROR - Failed to block 192.168.1.777: sudo: iptables: command not found
+
+2025-08-05 22:26:18,008 - ERROR - ❌ Failed to block 192.168.1.777: FirewallManager returned False
+2025-08-05 22:26:18,025 - ERROR - Failed to block 192.168.1.888: sudo: iptables: command not found
+
+2025-08-05 22:26:18,025 - ERROR - ❌ Failed to block 192.168.1.888: FirewallManager returned False
+2025-08-05 22:26:18,041 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:26:18,041 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:26:18,057 - ERROR - Failed to block 192.168.1.666: sudo: iptables: command not found
+
+2025-08-05 22:26:18,057 - ERROR - ❌ Failed to block 192.168.1.666: FirewallManager returned False
+2025-08-05 22:26:18,073 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:26:18,073 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:26:18,088 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:26:18,089 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:26:18,104 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:26:18,104 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:26:18,119 - ERROR - Failed to block 192.168.1.203: sudo: iptables: command not found
+
+2025-08-05 22:26:18,119 - ERROR - ❌ Failed to block 192.168.1.203: FirewallManager returned False
+2025-08-05 22:26:18,135 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:18,135 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:18,149 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:18,150 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:18,165 - ERROR - Failed to block 192.168.100.50: sudo: iptables: command not found
+
+2025-08-05 22:26:18,165 - ERROR - ❌ Failed to block 192.168.100.50: FirewallManager returned False
+2025-08-05 22:26:18,181 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:18,181 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:18,197 - ERROR - Failed to block 192.168.10.5: sudo: iptables: command not found
+
+2025-08-05 22:26:18,198 - ERROR - ❌ Failed to block 192.168.10.5: FirewallManager returned False
+2025-08-05 22:26:18,215 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:18,216 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:18,233 - ERROR - Failed to block 192.168.1.50: sudo: iptables: command not found
+
+2025-08-05 22:26:18,233 - ERROR - ❌ Failed to block 192.168.1.50: FirewallManager returned False
+2025-08-05 22:26:18,248 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:18,249 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:18,265 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:26:18,265 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:26:18,280 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:26:18,280 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:26:24,694 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/firewall_manager.py', reloading
+2025-08-05 22:26:24,831 - INFO -  * Restarting with stat
+2025-08-05 22:26:26,241 - INFO - ✅ ML models loaded successfully
+2025-08-05 22:26:26,247 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 22:26:26,248 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 22:26:26,248 - INFO - ✅ Models show good prediction variety
+2025-08-05 22:26:26,248 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:26:26,267 - WARNING -  * Debugger is active!
+2025-08-05 22:26:26,275 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 22:26:41,553 - INFO -  * Detected change in '/Users/macbookpro/Desktop/AI-powered--hyrbid-IDPS-1/backend/firewall_manager.py', reloading
+2025-08-05 22:26:41,681 - INFO -  * Restarting with stat
+2025-08-05 22:26:43,193 - INFO - ✅ ML models loaded successfully
+2025-08-05 22:26:43,199 - INFO - 🔍 Model variety check - IsolationForest: 1 unique predictions
+2025-08-05 22:26:43,199 - INFO - 🔍 Model variety check - OneClassSVM: 2 unique predictions
+2025-08-05 22:26:43,200 - INFO - ✅ Models show good prediction variety
+2025-08-05 22:26:43,200 - INFO - ✅ ML Integration initialized successfully
+2025-08-05 22:26:43,220 - WARNING -  * Debugger is active!
+2025-08-05 22:26:43,227 - INFO -  * Debugger PIN: 134-849-350
+2025-08-05 22:26:48,718 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:26:49,033 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:26:49,358 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:26:49,361 - INFO - 127.0.0.1 - - [05/Aug/2025 22:26:49] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:26:49,363 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:26:49,694 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:26:49,697 - INFO - 127.0.0.1 - - [05/Aug/2025 22:26:49] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:26:49,698 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:26:49,717 - ERROR - Failed to block 192.168.1.777: sudo: iptables: command not found
+
+2025-08-05 22:26:49,717 - ERROR - ❌ Failed to block 192.168.1.777: FirewallManager returned False
+2025-08-05 22:26:49,733 - ERROR - Failed to block 192.168.1.888: sudo: iptables: command not found
+
+2025-08-05 22:26:49,734 - ERROR - ❌ Failed to block 192.168.1.888: FirewallManager returned False
+2025-08-05 22:26:49,749 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:26:49,749 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:26:49,765 - ERROR - Failed to block 192.168.1.666: sudo: iptables: command not found
+
+2025-08-05 22:26:49,765 - ERROR - ❌ Failed to block 192.168.1.666: FirewallManager returned False
+2025-08-05 22:26:49,782 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:26:49,782 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:26:49,798 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:26:49,799 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:26:49,815 - ERROR - Failed to block 192.168.1.999: sudo: iptables: command not found
+
+2025-08-05 22:26:49,815 - ERROR - ❌ Failed to block 192.168.1.999: FirewallManager returned False
+2025-08-05 22:26:49,830 - ERROR - Failed to block 192.168.1.203: sudo: iptables: command not found
+
+2025-08-05 22:26:49,831 - ERROR - ❌ Failed to block 192.168.1.203: FirewallManager returned False
+2025-08-05 22:26:49,847 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:49,847 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:49,864 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:49,864 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:49,880 - ERROR - Failed to block 192.168.100.50: sudo: iptables: command not found
+
+2025-08-05 22:26:49,881 - ERROR - ❌ Failed to block 192.168.100.50: FirewallManager returned False
+2025-08-05 22:26:49,897 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:49,897 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:49,914 - ERROR - Failed to block 192.168.10.5: sudo: iptables: command not found
+
+2025-08-05 22:26:49,914 - ERROR - ❌ Failed to block 192.168.10.5: FirewallManager returned False
+2025-08-05 22:26:49,930 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:49,930 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:49,948 - ERROR - Failed to block 192.168.1.50: sudo: iptables: command not found
+
+2025-08-05 22:26:49,948 - ERROR - ❌ Failed to block 192.168.1.50: FirewallManager returned False
+2025-08-05 22:26:49,964 - ERROR - Failed to block 192.168.1.100: sudo: iptables: command not found
+
+2025-08-05 22:26:49,964 - ERROR - ❌ Failed to block 192.168.1.100: FirewallManager returned False
+2025-08-05 22:26:49,981 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:26:49,981 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:26:49,997 - ERROR - Failed to block 192.168.1.200: sudo: iptables: command not found
+
+2025-08-05 22:26:49,997 - ERROR - ❌ Failed to block 192.168.1.200: FirewallManager returned False
+2025-08-05 22:27:03,315 - INFO - 🛑 Monitoring stopped by user
+2025-08-05 22:27:08,875 - INFO - 🍎 Detected macOS - using pfctl for firewall management
+2025-08-05 22:27:08,875 - INFO - 🔍 Starting firewall threat monitoring...
+2025-08-05 22:27:09,572 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:27:09,904 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:27:10,482 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:27:10,483 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:10] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:27:10,483 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:27:10,796 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:27:10,804 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:10] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:27:10,805 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:27:10,806 - WARNING - 🚫 BLOCKED IP: 192.168.1.777 - Reason: ML Anomaly (score: 1.00) (macOS - recorded)
+2025-08-05 22:27:10,806 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:10,806 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:10,806 - WARNING - 🔒 BLOCKED IP 192.168.1.777 due to ML anomaly (score: 1.00)
+2025-08-05 22:27:11,862 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.20 "HTTP/2 200 OK"
+2025-08-05 22:27:11,868 - INFO - ✅ Updated ML alert 20 action to: IP_BLOCKED
+2025-08-05 22:27:11,869 - WARNING - 🚫 BLOCKED IP: 192.168.1.888 - Reason: ML Anomaly (score: 1.00) (macOS - recorded)
+2025-08-05 22:27:11,869 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:11,869 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:11,869 - WARNING - 🔒 BLOCKED IP 192.168.1.888 due to ML anomaly (score: 1.00)
+2025-08-05 22:27:12,188 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.19 "HTTP/2 200 OK"
+2025-08-05 22:27:12,188 - INFO - ✅ Updated ML alert 19 action to: IP_BLOCKED
+2025-08-05 22:27:12,189 - WARNING - 🚫 BLOCKED IP: 192.168.1.999 - Reason: ML Anomaly (score: 1.00) (macOS - recorded)
+2025-08-05 22:27:12,189 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:12,189 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:12,189 - WARNING - 🔒 BLOCKED IP 192.168.1.999 due to ML anomaly (score: 1.00)
+2025-08-05 22:27:12,496 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.18 "HTTP/2 200 OK"
+2025-08-05 22:27:12,498 - INFO - ✅ Updated ML alert 18 action to: IP_BLOCKED
+2025-08-05 22:27:12,498 - WARNING - 🚫 BLOCKED IP: 192.168.1.666 - Reason: ML Anomaly (score: 1.00) (macOS - recorded)
+2025-08-05 22:27:12,499 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:12,499 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:12,499 - WARNING - 🔒 BLOCKED IP 192.168.1.666 due to ML anomaly (score: 1.00)
+2025-08-05 22:27:12,814 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.17 "HTTP/2 200 OK"
+2025-08-05 22:27:12,815 - INFO - ✅ Updated ML alert 17 action to: IP_BLOCKED
+2025-08-05 22:27:12,815 - WARNING - 🚫 BLOCKED IP: 192.168.1.203 - Reason: ML Anomaly (score: 0.99) (macOS - recorded)
+2025-08-05 22:27:12,815 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:12,815 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:12,815 - WARNING - 🔒 BLOCKED IP 192.168.1.203 due to ML anomaly (score: 0.99)
+2025-08-05 22:27:13,140 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.13 "HTTP/2 200 OK"
+2025-08-05 22:27:13,143 - INFO - ✅ Updated ML alert 13 action to: IP_BLOCKED
+2025-08-05 22:27:13,144 - WARNING - 🚫 BLOCKED IP: 192.168.1.100 - Reason: ML Anomaly (score: 0.97) (macOS - recorded)
+2025-08-05 22:27:13,144 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:13,144 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:13,144 - WARNING - 🔒 BLOCKED IP 192.168.1.100 due to ML anomaly (score: 0.97)
+2025-08-05 22:27:13,552 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.12 "HTTP/2 200 OK"
+2025-08-05 22:27:13,553 - INFO - ✅ Updated ML alert 12 action to: IP_BLOCKED
+2025-08-05 22:27:13,554 - WARNING - 🚫 BLOCKED IP: 192.168.100.50 - Reason: ML Anomaly (score: 1.00) (macOS - recorded)
+2025-08-05 22:27:13,554 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:13,554 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:13,554 - WARNING - 🔒 BLOCKED IP 192.168.100.50 due to ML anomaly (score: 1.00)
+2025-08-05 22:27:13,935 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.10 "HTTP/2 200 OK"
+2025-08-05 22:27:13,936 - INFO - ✅ Updated ML alert 10 action to: IP_BLOCKED
+2025-08-05 22:27:13,936 - WARNING - 🚫 BLOCKED IP: 192.168.10.5 - Reason: ML Anomaly (score: 1.00) (macOS - recorded)
+2025-08-05 22:27:13,937 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:13,937 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:13,937 - WARNING - 🔒 BLOCKED IP 192.168.10.5 due to ML anomaly (score: 1.00)
+2025-08-05 22:27:14,245 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.8 "HTTP/2 200 OK"
+2025-08-05 22:27:14,247 - INFO - ✅ Updated ML alert 8 action to: IP_BLOCKED
+2025-08-05 22:27:14,248 - WARNING - 🚫 BLOCKED IP: 192.168.1.50 - Reason: ML Anomaly (score: 0.89) (macOS - recorded)
+2025-08-05 22:27:14,248 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:14,249 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:14,249 - WARNING - 🔒 BLOCKED IP 192.168.1.50 due to ML anomaly (score: 0.89)
+2025-08-05 22:27:14,562 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.4 "HTTP/2 200 OK"
+2025-08-05 22:27:14,568 - INFO - ✅ Updated ML alert 4 action to: IP_BLOCKED
+2025-08-05 22:27:14,570 - WARNING - 🚫 BLOCKED IP: 192.168.1.200 - Reason: ML Anomaly (score: 0.89) (macOS - recorded)
+2025-08-05 22:27:14,571 - INFO - 💡 Note: On macOS, IP blocking is recorded but not actively enforced.
+2025-08-05 22:27:14,571 - INFO -    To enforce blocking, configure pfctl or use macOS firewall settings.
+2025-08-05 22:27:14,571 - WARNING - 🔒 BLOCKED IP 192.168.1.200 due to ML anomaly (score: 0.89)
+2025-08-05 22:27:14,892 - INFO - HTTP Request: PATCH https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?id=eq.2 "HTTP/2 200 OK"
+2025-08-05 22:27:14,893 - INFO - ✅ Updated ML alert 2 action to: IP_BLOCKED
+2025-08-05 22:27:15,298 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:15] "GET / HTTP/1.1" 200 -
+2025-08-05 22:27:45,706 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:27:46,014 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:27:46,319 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:27:46,320 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:46] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:27:46,322 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:27:46,637 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:27:46,641 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:46] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:27:46,642 - INFO - 🤖 ML alerts check: 20 alerts found
+2025-08-05 22:27:49,417 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:49] "GET / HTTP/1.1" 200 -
+2025-08-05 22:27:49,736 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=id "HTTP/2 200 OK"
+2025-08-05 22:27:50,048 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&created_at=gte.2025-08-05T00%3A00%3A00Z "HTTP/2 200 OK"
+2025-08-05 22:27:50,049 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:50] "GET /ml-stats HTTP/1.1" 200 -
+2025-08-05 22:27:56,063 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:56] "GET / HTTP/1.1" 200 -
+2025-08-05 22:27:59,282 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:59] "GET / HTTP/1.1" 200 -
+2025-08-05 22:27:59,289 - INFO - 127.0.0.1 - - [05/Aug/2025 22:27:59] "GET / HTTP/1.1" 200 -
+2025-08-05 22:28:03,873 - INFO - 127.0.0.1 - - [05/Aug/2025 22:28:03] "GET / HTTP/1.1" 200 -
+2025-08-05 22:28:09,701 - INFO - 127.0.0.1 - - [05/Aug/2025 22:28:09] "GET / HTTP/1.1" 200 -
+2025-08-05 22:28:17,086 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=flow_packets_sec%2Cflow_duration&flow_packets_sec=gt.1000&flow_duration=lt.1000 "HTTP/2 200 OK"
+2025-08-05 22:28:17,407 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=dst_port%2Cpacket_length_mean%2Cflow_duration&packet_length_mean=lt.100&flow_duration=lt.1000&dst_port=in.%2822%2C21%2C23%2C3306%29 "HTTP/2 200 OK"
+2025-08-05 22:28:17,741 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/network_data?select=%2A&label=eq.2&offset=0&limit=1000 "HTTP/2 200 OK"
+2025-08-05 22:28:17,743 - INFO - 127.0.0.1 - - [05/Aug/2025 22:28:17] "GET /run-rule-engine HTTP/1.1" 200 -
+2025-08-05 22:28:17,743 - INFO - 📊 Rule engine check: 0 new alerts
+2025-08-05 22:28:18,055 - INFO - HTTP Request: GET https://iiwrpridqmncfhssnfxc.supabase.co/rest/v1/ml_alerts?select=%2A&order=created_at.desc&limit=50 "HTTP/2 200 OK"
+2025-08-05 22:28:18,063 - INFO - 127.0.0.1 - - [05/Aug/2025 22:28:18] "GET /ml-alerts HTTP/1.1" 200 -
+2025-08-05 22:28:18,064 - INFO - 🤖 ML alerts check: 20 alerts found

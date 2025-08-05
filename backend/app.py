@@ -290,6 +290,38 @@ def ml_stats_endpoint():
         print(f"Error getting ML statistics: {e}")
         return jsonify({"error": str(e)}), 500
 
+# --- ML alerts endpoint ---
+@app.route("/ml-alerts", methods=["GET"])
+def ml_alerts_endpoint():
+    """Get recent ML alerts for firewall manager"""
+    if not SUPABASE_AVAILABLE:
+        return jsonify({
+            "error": "Supabase not available",
+            "suggestion": "Check Supabase connection"
+        }), 503
+    
+    try:
+        # Get recent ML alerts from Supabase
+        response = supabase.table("ml_alerts") \
+            .select("*") \
+            .order("created_at", desc=True) \
+            .limit(50) \
+            .execute()
+        
+        alerts = response.data if response.data else []
+        
+        return jsonify({
+            "status": "success",
+            "alerts": alerts,
+            "count": len(alerts)
+        }), 200
+        
+    except Exception as e:
+        if LOGGER_AVAILABLE:
+            logger.error(f"Error getting ML alerts: {e}")
+        print(f"Error getting ML alerts: {e}")
+        return jsonify({"error": str(e)}), 500
+
 # --- Trigger ML detection cycle endpoint ---
 @app.route("/run-ml-detection", methods=["POST"])
 def run_ml_detection_endpoint():

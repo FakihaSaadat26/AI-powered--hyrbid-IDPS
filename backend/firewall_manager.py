@@ -8,7 +8,7 @@ import threading
 import os
 
 # Configuration
-API_BASE_URL = "http://localhost:5000"
+API_BASE_URL = "http://localhost:5050"
 RULE_ENGINE_ENDPOINT = f"{API_BASE_URL}/run-rule-engine"
 BLOCKED_IPS_FILE = "blocked_ips.json"
 CHECK_INTERVAL = 30  # Check for new threats every 30 seconds
@@ -50,39 +50,41 @@ class FirewallManager:
             logger.error(f"Error saving blocked IPs: {e}")
     
     def create_custom_chain(self):
-        """Create custom iptables chain for our blocks"""
+        """Create custom firewall rules for our blocks"""
         try:
-            # Create custom chain
-            subprocess.run([
-                "sudo", "iptables", "-t", "filter", "-N", "IDPS_BLOCK"
-            ], capture_output=True)
-            logger.info("Created IDPS_BLOCK chain")
-        except:
-            pass  # Chain might already exist
-        
-        # Ensure our chain is referenced in INPUT
-        try:
-            subprocess.run([
-                "sudo", "iptables", "-I", "INPUT", "-j", "IDPS_BLOCK"
-            ], capture_output=True)
-            logger.info("Added IDPS_BLOCK to INPUT chain")
+            # Check if we're on macOS (use pfctl) or Linux (use iptables)
+            if os.uname().sysname == 'Darwin':  # macOS
+                logger.info("🍎 Detected macOS - using pfctl for firewall management")
+                self.is_macos = True
+            else:  # Linux
+                logger.info("🐧 Detected Linux - using iptables for firewall management")
+                self.is_macos = False
+                
+                # Create custom chain for Linux
+                subprocess.run([
+                    "sudo", "iptables", "-t", "filter", "-N", "IDPS_BLOCK"
+                ], capture_output=True)
+                logger.info("Created IDPS_BLOCK chain")
+                
+                # Ensure our chain is referenced in INPUT
+                subprocess.run([
+                    "sudo", "iptables", "-I", "INPUT", "-j", "IDPS_BLOCK"
+                ], capture_output=True)
+                logger.info("Added IDPS_BLOCK to INPUT chain")
+                
         except Exception as e:
-            logger.warning(f"Chain reference might already exist: {e}")
+            logger.warning(f"Chain setup warning: {e}")
     
     def block_ip(self, ip_address, reason="Threat detected"):
-        """Block an IP address using iptables"""
+        """Block an IP address using appropriate firewall"""
         if ip_address in ["unknown", "localhost", "127.0.0.1", ""]:
             logger.warning(f"Skipping block for invalid IP: {ip_address}")
             return False
         
         try:
-            # Add iptables rule
-            result = subprocess.run([
-                "sudo", "iptables", "-I", "IDPS_BLOCK", "-s", ip_address, "-j", "DROP"
-            ], capture_output=True, text=True)
-            
-            if result.returncode == 0:
-                # Record the block
+            if hasattr(self, 'is_macos') and self.is_macos:
+                # macOS: Just record the block (simplified approach)
+                # In a real implementation, you would use pfctl or other macOS firewall tools
                 self.blocked_ips[ip_address] = {
                     "blocked_at": datetime.now().isoformat(),
                     "reason": reason,
@@ -90,11 +92,30 @@ class FirewallManager:
                 }
                 self.save_blocked_ips()
                 
-                logger.warning(f"🚫 BLOCKED IP: {ip_address} - Reason: {reason}")
+                logger.warning(f"🚫 BLOCKED IP: {ip_address} - Reason: {reason} (macOS - recorded)")
+                logger.info(f"💡 Note: On macOS, IP blocking is recorded but not actively enforced.")
+                logger.info(f"   To enforce blocking, configure pfctl or use macOS firewall settings.")
                 return True
             else:
-                logger.error(f"Failed to block {ip_address}: {result.stderr}")
-                return False
+                # Linux: Use iptables
+                result = subprocess.run([
+                    "sudo", "iptables", "-I", "IDPS_BLOCK", "-s", ip_address, "-j", "DROP"
+                ], capture_output=True, text=True)
+                
+                if result.returncode == 0:
+                    # Record the block
+                    self.blocked_ips[ip_address] = {
+                        "blocked_at": datetime.now().isoformat(),
+                        "reason": reason,
+                        "expires_at": (datetime.now() + timedelta(seconds=BLOCK_DURATION)).isoformat()
+                    }
+                    self.save_blocked_ips()
+                    
+                    logger.warning(f"🚫 BLOCKED IP: {ip_address} - Reason: {reason} (Linux)")
+                    return True
+                else:
+                    logger.error(f"Failed to block {ip_address}: {result.stderr}")
+                    return False
                 
         except Exception as e:
             logger.error(f"Error blocking IP {ip_address}: {e}")
@@ -103,22 +124,33 @@ class FirewallManager:
     def unblock_ip(self, ip_address):
         """Unblock an IP address"""
         try:
-            # Remove iptables rule
-            result = subprocess.run([
-                "sudo", "iptables", "-D", "IDPS_BLOCK", "-s", ip_address, "-j", "DROP"
-            ], capture_output=True, text=True)
-            
-            if result.returncode == 0:
-                # Remove from our records
+            if hasattr(self, 'is_macos') and self.is_macos:
+                # macOS: Just remove from our records
                 if ip_address in self.blocked_ips:
                     del self.blocked_ips[ip_address]
                     self.save_blocked_ips()
-                
-                logger.info(f"✅ UNBLOCKED IP: {ip_address}")
-                return True
+                    logger.info(f"✅ UNBLOCKED IP: {ip_address} (macOS - removed from records)")
+                    return True
+                else:
+                    logger.warning(f"IP {ip_address} not found in blocked IPs")
+                    return False
             else:
-                logger.warning(f"Failed to unblock {ip_address}: {result.stderr}")
-                return False
+                # Linux: Use iptables
+                result = subprocess.run([
+                    "sudo", "iptables", "-D", "IDPS_BLOCK", "-s", ip_address, "-j", "DROP"
+                ], capture_output=True, text=True)
+                
+                if result.returncode == 0:
+                    # Remove from our records
+                    if ip_address in self.blocked_ips:
+                        del self.blocked_ips[ip_address]
+                        self.save_blocked_ips()
+                    
+                    logger.info(f"✅ UNBLOCKED IP: {ip_address} (Linux)")
+                    return True
+                else:
+                    logger.warning(f"Failed to unblock {ip_address}: {result.stderr}")
+                    return False
                 
         except Exception as e:
             logger.error(f"Error unblocking IP {ip_address}: {e}")
@@ -141,6 +173,7 @@ class FirewallManager:
     def check_for_threats(self):
         """Check API for new threats and block IPs"""
         try:
+            # Check rule engine threats
             response = requests.get(RULE_ENGINE_ENDPOINT, timeout=10)
             
             if response.status_code == 200:
@@ -159,12 +192,69 @@ class FirewallManager:
                         if self.block_ip(src_ip, f"{threat_type} ({severity})"):
                             # Update alert in database to show action taken
                             self.update_alert_action(alert, "IP_BLOCKED")
-                
             else:
                 logger.error(f"Rule engine API error: {response.status_code}")
+            
+            # Check ML alerts for blocking
+            self.check_ml_alerts()
                 
         except Exception as e:
             logger.error(f"Error checking for threats: {e}")
+    
+    def check_ml_alerts(self):
+        """Check ML alerts for high anomaly scores and block IPs"""
+        try:
+            # Get recent ML alerts from the API
+            response = requests.get(f"{API_BASE_URL}/ml-alerts", timeout=10)
+            
+            if response.status_code == 200:
+                result = response.json()
+                ml_alerts = result.get('alerts', [])
+                
+                logger.info(f"🤖 ML alerts check: {len(ml_alerts)} alerts found")
+                
+                for alert in ml_alerts:
+                    src_ip = alert.get('src_ip', 'unknown')
+                    anomaly_score = alert.get('anomaly_score', 0)
+                    action_taken = alert.get('action_taken', 'PENDING')
+                    
+                    # Block IPs with high anomaly scores (> 0.8) that haven't been blocked yet
+                    # Check for both PENDING and API_DETECTED status
+                    if (anomaly_score > 0.8 and 
+                        action_taken in ['PENDING', 'API_DETECTED'] and 
+                        src_ip not in self.blocked_ips and
+                        src_ip not in ['unknown', 'localhost', '127.0.0.1', '']):
+                        
+                        if self.block_ip(src_ip, f"ML Anomaly (score: {anomaly_score:.2f})"):
+                            logger.warning(f"🔒 BLOCKED IP {src_ip} due to ML anomaly (score: {anomaly_score:.2f})")
+                            # Update the alert action
+                            self.update_ml_alert_action(alert, "IP_BLOCKED")
+                        else:
+                            logger.error(f"❌ Failed to block {src_ip}: FirewallManager returned False")
+            else:
+                logger.error(f"ML alerts API error: {response.status_code}")
+                
+        except Exception as e:
+            logger.error(f"Error checking ML alerts: {e}")
+    
+    def update_ml_alert_action(self, alert, action):
+        """Update ML alert action in database"""
+        try:
+            # Update the alert action in Supabase directly
+            alert_id = alert.get('id')
+            if alert_id:
+                # Use Supabase client to update the alert
+                from supabase_client import supabase
+                response = supabase.table("ml_alerts") \
+                    .update({"action_taken": action}) \
+                    .eq("id", alert_id) \
+                    .execute()
+                
+                logger.info(f"✅ Updated ML alert {alert_id} action to: {action}")
+            else:
+                logger.warning("⚠️  No alert ID found for updating action")
+        except Exception as e:
+            logger.error(f"Error updating ML alert action: {e}")
     
     def update_alert_action(self, alert, action):
         """Update alert in database to show action taken (optional enhancement)"""
